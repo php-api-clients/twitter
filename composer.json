@@ -1,0 +1,41 @@
+{
+    "name": "api-clients/twitter",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Cees-Jan Kiewiet",
+            "email": "ceesjank@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "api-clients/foundation": "dev-master",
+        "jacobkiers/oauth": "^1.0",
+        "react/http-client": "^0.4.12",
+        "rx/operator-extras": "^0.3.0"
+    },
+    "require-dev": {
+        "api-clients/resource-generator": "dev-master",
+        "api-clients/resource-test-utilities": "dev-master",
+        "api-clients/test-utilities": "dev-master",
+        "phake/phake": "^2.3",
+        "phpunit/phpunit": "^5.2.3",
+        "squizlabs/php_codesniffer": "^2.6",
+        "vectorface/dunit": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ApiClients\\Twitter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ApiClients\\Tests\\Twitter\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
