@@ -1,0 +1,4 @@
+class: DeletedTweet
+properties:
+  status: array
+  timestamp_ms: string
