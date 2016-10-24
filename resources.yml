@@ -1,0 +1,8 @@
+yaml_location: yaml
+api_settings: ApiClients\Twitter\ApiSettings
+src:
+  path: src/Resource
+  namespace: ApiClients\Twitter\Resource
+tests:
+  path: tests/Resource
+  namespace: ApiClients\Tests\Twitter\Resource
