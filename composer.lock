@@ -260,19 +260,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/middleware-oauth1.git",
-                "reference": "da7af15f0e583cfd63ba9a0b27efb2f33ffc169e"
+                "reference": "b4fcbe03b48f391bfb2e9cf3b432792ab63390f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/middleware-oauth1/zipball/da7af15f0e583cfd63ba9a0b27efb2f33ffc169e",
-                "reference": "da7af15f0e583cfd63ba9a0b27efb2f33ffc169e",
+                "url": "https://api.github.com/repos/php-api-clients/middleware-oauth1/zipball/b4fcbe03b48f391bfb2e9cf3b432792ab63390f0",
+                "reference": "b4fcbe03b48f391bfb2e9cf3b432792ab63390f0",
                 "shasum": ""
             },
             "require": {
                 "api-clients/middleware": "dev-master",
                 "api-clients/psr7-oauth1": "dev-master",
                 "guzzlehttp/psr7": "^1.3",
-                "jacobkiers/oauth": "^1.0",
                 "php": "^7.0",
                 "wyrihaximus/ticking-promise": "^1.6"
             },
@@ -295,7 +294,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2016-11-11 07:00:17"
+            "time": "2016-11-20 21:19:17"
         },
         {
             "name": "api-clients/psr7-oauth1",
@@ -1206,65 +1205,6 @@
                 "hash-map"
             ],
             "time": "2014-12-15 23:03:51"
-        },
-        {
-            "name": "jacobkiers/oauth",
-            "version": "1.0.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jacobkiers/OAuth.git",
-                "reference": "95477a77107436e67a10e799fad04d82719a5f1e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jacobkiers/OAuth/zipball/95477a77107436e67a10e799fad04d82719a5f1e",
-                "reference": "95477a77107436e67a10e799fad04d82719a5f1e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "*",
-                "phpunit/phpunit": "3.7.*@stable",
-                "squizlabs/php_codesniffer": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "JacobKiers\\OAuth": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gary Jones",
-                    "email": "gary@garyjones.co.uk",
-                    "role": "developer"
-                },
-                {
-                    "name": "Alexandre Eher",
-                    "role": "Composer packager"
-                },
-                {
-                    "name": "Jacob Kiers",
-                    "email": "jacob@alphacomm.nl",
-                    "role": "developer"
-                },
-                {
-                    "name": "Andy Smith",
-                    "role": "original author"
-                }
-            ],
-            "description": "Based on Andy Smith's basic PHP library for OAuth 1.0a",
-            "homepage": "https://github.com/jacobkiers/OAuth",
-            "keywords": [
-                "oauth"
-            ],
-            "time": "2015-10-02 13:50:51"
         },
         {
             "name": "joshdifabio/composed",

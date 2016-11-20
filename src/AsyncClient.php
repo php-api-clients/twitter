@@ -26,7 +26,7 @@ class AsyncClient
     /**
      * @var Client
      */
-    protected $transport;
+    protected $client;
 
     public function __construct(
         string $consumerKey,
@@ -47,8 +47,6 @@ class AsyncClient
             $client = Factory::create($loop, $this->options);
         }
         $this->client = $client;
-        $this->consumer = new Consumer($consumerKey, $consumerSecret);
-        $this->token = new Token($accessToken, $accessTokenSecret);
     }
 
     public function user(string $user): PromiseInterface

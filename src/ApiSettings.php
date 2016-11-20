@@ -8,8 +8,8 @@ use ApiClients\Foundation\Options;
 use ApiClients\Foundation\Transport\Middleware\JsonDecodeMiddleware;
 use ApiClients\Foundation\Transport\Options as TransportOptions;
 use ApiClients\Foundation\Transport\UserAgentStrategies;
-use JacobKiers\OAuth\Consumer\Consumer;
-use JacobKiers\OAuth\Token\Token;
+use ApiClients\Foundation\Oauth1\Options as Oauth1Options;
+use ApiClients\Tools\Psr7\Oauth1\Definition;
 
 class ApiSettings
 {
@@ -37,24 +37,16 @@ class ApiSettings
     ): array {
         $options = self::TRANSPORT_OPTIONS;
         $options[Options::HYDRATOR_OPTIONS][HydratorOptions::NAMESPACE_SUFFIX] = $suffix;
-        $options['auth'] = [
-            'consumer' => [
-                'key' => $consumerKey,
-                'secret' => $consumerSecret,
-            ],
-            'access_token' => [
-                'token' => $accessToken,
-                'secret' => $accessTokenSecret,
-            ],
-        ];
         $options[Options::TRANSPORT_OPTIONS][TransportOptions::MIDDLEWARE] = [
             Oauth1Middleware::class,
             JsonDecodeMiddleware::class,
         ];
         $options[Options::TRANSPORT_OPTIONS][TransportOptions::DEFAULT_REQUEST_OPTIONS] = [
             Oauth1Middleware::class => [
-                \ApiClients\Foundation\Oauth1\Options::CONSUMER => new Consumer($options['auth']['consumer']['key'], $options['auth']['consumer']['secret']),
-                \ApiClients\Foundation\Oauth1\Options::TOKEN => new Token($options['auth']['access_token']['token'], $options['auth']['access_token']['secret']),
+                Oauth1Options::CONSUMER_KEY => new Definition\ConsumerKey($consumerKey),
+                Oauth1Options::CONSUMER_SECRET => new Definition\ConsumerSecret($consumerSecret),
+                Oauth1Options::ACCESS_TOKEN => new Definition\AccessToken($accessToken),
+                Oauth1Options::TOKEN_SECRET => new Definition\TokenSecret($accessTokenSecret),
             ],
         ];
         return $options;
