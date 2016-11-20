@@ -37,7 +37,13 @@ class AsyncClient
         Client $client = null
     ) {
         if (!($client instanceof Client)) {
-            $this->options = ApiSettings::getOptions($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret, 'Async');
+            $this->options = ApiSettings::getOptions(
+                $consumerKey,
+                $consumerSecret,
+                $accessToken,
+                $accessTokenSecret,
+                'Async'
+            );
             $client = Factory::create($loop, $this->options);
         }
         $this->client = $client;
@@ -87,7 +93,9 @@ class AsyncClient
             return trim($json) !== ''; // To keep the stream alive Twitter sends an empty line at times
         })->jsonDecode()->flatMap(function (array $document) {
             if (isset($document['delete'])) {
-                return Promise::toObservable($this->client->handle(new HydrateCommand('DeletedTweet', $document['delete'])));
+                return Promise::toObservable($this->client->handle(
+                    new HydrateCommand('DeletedTweet', $document['delete'])
+                ));
             }
 
             return Promise::toObservable($this->client->handle(new HydrateCommand('Tweet', $document)));
