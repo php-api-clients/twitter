@@ -12,18 +12,16 @@
     "require": {
         "php": "^7.0",
         "api-clients/foundation": "dev-master",
-        "jacobkiers/oauth": "^1.0",
-        "react/http-client": "^0.4.12",
-        "rx/operator-extras": "^0.3.0"
+        "api-clients/middleware-oauth1": "dev-master",
+        "api-clients/rx-operators": "dev-master",
+        "api-clients/transport": "dev-master",
+        "react/http-client": "^0.4.14",
+        "reactivex/rxphp": "dev-custom_operators as 1.4.0"
     },
     "require-dev": {
         "api-clients/resource-generator": "dev-master",
         "api-clients/resource-test-utilities": "dev-master",
-        "api-clients/test-utilities": "dev-master",
-        "phake/phake": "^2.3",
-        "phpunit/phpunit": "^5.2.3",
-        "squizlabs/php_codesniffer": "^2.6",
-        "vectorface/dunit": "~2.0"
+        "api-clients/test-utilities": "dev-master"
     },
     "autoload": {
         "psr-4": {
@@ -35,6 +33,12 @@
             "ApiClients\\Tests\\Twitter\\": "tests/"
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/mbonneau/RxPHP"
+        }
+    ],
     "config": {
         "sort-packages": true
     }
