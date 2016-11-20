@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace ApiClients\Twitter\Resource\Async;
+namespace ApiClients\Client\Twitter\Resource\Async;
 
-use ApiClients\Twitter\Resource\User as BaseUser;
+use ApiClients\Client\Twitter\Resource\User as BaseUser;
 
 class User extends BaseUser
 {

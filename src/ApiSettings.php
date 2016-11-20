@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace ApiClients\Twitter;
+namespace ApiClients\Client\Twitter;
 
 use ApiClients\Foundation\Hydrator\Options as HydratorOptions;
 use ApiClients\Foundation\Oauth1\Middleware\Oauth1Middleware;
@@ -13,7 +13,7 @@ use JacobKiers\OAuth\Token\Token;
 
 class ApiSettings
 {
-    const NAMESPACE = 'ApiClients\\Twitter\\Resource';
+    const NAMESPACE = 'ApiClients\\Client\\Twitter\\Resource';
 
     const TRANSPORT_OPTIONS = [
         Options::HYDRATOR_OPTIONS => [

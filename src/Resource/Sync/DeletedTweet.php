@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace ApiClients\Twitter\Resource\Sync;
+namespace ApiClients\Client\Twitter\Resource\Sync;
 
-use ApiClients\Twitter\Resource\DeletedTweet as BaseDeletedTweet;
+use ApiClients\Client\Twitter\Resource\DeletedTweet as BaseDeletedTweet;
 
 class DeletedTweet extends BaseDeletedTweet
 {

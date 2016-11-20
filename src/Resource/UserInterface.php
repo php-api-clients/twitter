@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace ApiClients\Twitter\Resource;
+namespace ApiClients\Client\Twitter\Resource;
 
 use ApiClients\Foundation\Resource\ResourceInterface;
 use DateTime;

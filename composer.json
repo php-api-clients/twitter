@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "ApiClients\\Twitter\\": "src/"
+            "ApiClients\\Client\\Twitter\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ApiClients\\Tests\\Twitter\\": "tests/"
+            "ApiClients\\Tests\\Client\\Twitter\\": "tests/"
         }
     },
     "repositories": [

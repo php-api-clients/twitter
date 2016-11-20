@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace ApiClients\Twitter\Resource\Sync;
+namespace ApiClients\Client\Twitter\Resource\Sync;
 
-use ApiClients\Twitter\Resource\User as BaseUser;
+use ApiClients\Client\Twitter\Resource\User as BaseUser;
 
 class User extends BaseUser
 {

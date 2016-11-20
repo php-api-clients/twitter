@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace ApiClients\Twitter;
+namespace ApiClients\Client\Twitter;
 
 use ApiClients\Foundation\Factory;
 use ApiClients\Foundation\Hydrator\CommandBus\Command\HydrateCommand;

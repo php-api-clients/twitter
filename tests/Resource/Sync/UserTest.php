@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace ApiClients\Tests\Twitter\Resource\Sync;
+namespace ApiClients\Tests\Client\Twitter\Resource\Sync;
 
 use ApiClients\Tools\ResourceTestUtilities\AbstractResourceTest;
-use ApiClients\Twitter\ApiSettings;
-use ApiClients\Twitter\Resource\User;
+use ApiClients\Client\Twitter\ApiSettings;
+use ApiClients\Client\Twitter\Resource\User;
 
 class UserTest extends AbstractResourceTest
 {

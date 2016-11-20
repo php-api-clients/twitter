@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace ApiClients\Tests\Twitter\Resource\Async;
+namespace ApiClients\Tests\Client\Twitter\Resource\Async;
 
 use ApiClients\Tools\ResourceTestUtilities\AbstractResourceTest;
-use ApiClients\Twitter\ApiSettings;
-use ApiClients\Twitter\Resource\DeletedTweet;
+use ApiClients\Client\Twitter\ApiSettings;
+use ApiClients\Client\Twitter\Resource\DeletedTweet;
 
 class DeletedTweetTest extends AbstractResourceTest
 {

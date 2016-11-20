@@ -1,9 +1,9 @@
 <?php
 
-use ApiClients\Twitter\Resource\Async\DeletedTweet;
-use ApiClients\Twitter\Resource\Async\Tweet;
+use ApiClients\Client\Twitter\Resource\Async\DeletedTweet;
+use ApiClients\Client\Twitter\Resource\Async\Tweet;
 use React\EventLoop\Factory;
-use ApiClients\Twitter\AsyncClient;
+use ApiClients\Client\Twitter\AsyncClient;
 use function ApiClients\Foundation\resource_pretty_print;
 use React\EventLoop\Timer\TimerInterface;
 

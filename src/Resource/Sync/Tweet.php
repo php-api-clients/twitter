@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace ApiClients\Twitter\Resource\Sync;
+namespace ApiClients\Client\Twitter\Resource\Sync;
 
-use ApiClients\Twitter\Resource\Tweet as BaseTweet;
+use ApiClients\Client\Twitter\Resource\Tweet as BaseTweet;
 
 class Tweet extends BaseTweet
 {
