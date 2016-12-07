@@ -1,5 +1,6 @@
 {
     "name": "api-clients/twitter",
+    "description": "Async first twitter client",
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
