@@ -9,35 +9,54 @@ cache:
 ## PHP versions we test against
 php:
   - 7.0
-  - hhvm
+  - 7.1
+  - nightly
+
+## Environment variables
+env:
+  - coverage=true
 
 ## Build matrix for lowest and highest possible targets
 matrix:
   include:
     - php: 7.0
-      env: dependencies=lowest
-    - php: hhvm
-      env: dependencies=lowest
+      env:
+        - dependencies=lowest
+        - coverage=false
+    - php: 7.1
+      env:
+        - dependencies=lowest
+        - coverage=false
+    - php: nightly
+      env:
+        - dependencies=lowest
+        - coverage=false
     - php: 7.0
-      env: dependencies=highest
-    - php: hhvm
-      env: dependencies=highest
-  allow_failures:
-    - php: hhvm
-
-## Update composer and configure authentication token
-before_install:
-  - composer self-update
+      env:
+        - dependencies=highest
+        - coverage=false
+    - php: 7.1
+      env:
+        - dependencies=highest
+        - coverage=false
+    - php: nightly
+      env:
+        - dependencies=highest
+        - coverage=false
 
 ## Install or update dependencies
 install:
+  - composer validate
+  - if [ "$coverage" = "false" ]; then phpenv config-rm xdebug.ini || :; fi;
   - if [ -z "$dependencies" ]; then composer install --prefer-dist; fi;
   - if [ "$dependencies" = "lowest" ]; then composer update --prefer-lowest --prefer-dist -n; fi;
   - if [ "$dependencies" = "highest" ]; then composer update --prefer-dist -n; fi;
   - composer show
 
 ## Run the actual test
-script: make travis
+script:
+  - if [ "$coverage" = "false" ]; then make ci; fi;
+  - if [ "$coverage" = "true" ]; then make ci-with-coverage; fi;
 
 ## Gather coverage and set it to coverage servers
-after_script: make travis-coverage
+after_script: make ci-coverage
