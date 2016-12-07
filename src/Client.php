@@ -22,12 +22,24 @@ class Client
 
     public function __construct(
         string $consumerKey,
-        string $consumerSecret,
-        string $accessToken,
-        string $accessTokenSecret
+        string $consumerSecret
     ) {
         $this->loop = LoopFactory::create();
-        $this->client = new AsyncClient($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret, $this->loop);
+        $this->client = new AsyncClient($consumerKey, $consumerSecret, $this->loop);
+    }
+
+    public function withAccessToken(string $accessToken, string $accessTokenSecret): Client
+    {
+        $clone = clone $this;
+        $clone->client = $this->client->withAccessToken($accessToken, $accessTokenSecret);
+        return $clone;
+    }
+
+    public function withOutAccessToken(): Client
+    {
+        $clone = clone $this;
+        $clone->client = $this->client->withOutAccessToken();
+        return $clone;
     }
 
     public function tweet(string $tweet): TweetInterface

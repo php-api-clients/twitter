@@ -10,12 +10,13 @@ require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 $config = require 'resolve_config.php';
 
 $loop = Factory::create();
-$client = new AsyncClient(
+$client = (new AsyncClient(
     $config['consumer']['key'],
     $config['consumer']['secret'],
-    $config['access_token']['token'],
-    $config['access_token']['secret'],
     $loop
+))->withAccessToken(
+    $config['access_token']['token'],
+    $config['access_token']['secret']
 );
 
 $users = [
