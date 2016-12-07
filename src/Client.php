@@ -8,7 +8,7 @@ use React\EventLoop\Factory as LoopFactory;
 use function Clue\React\Block\await;
 use React\EventLoop\LoopInterface;
 
-class Client
+final class Client
 {
     /**
      * @var LoopInterface
@@ -19,6 +19,11 @@ class Client
      * @var AsyncClient
      */
     protected $client;
+
+    /**
+     * @var StreamingClient
+     */
+    protected $streamingClient;
 
     public function __construct(
         string $consumerKey,
@@ -40,6 +45,19 @@ class Client
         $clone = clone $this;
         $clone->client = $this->client->withOutAccessToken();
         return $clone;
+    }
+
+    public function stream(): StreamingClient
+    {
+        if (!($this->streamingClient instanceof StreamingClient)) {
+            $this->streamingClient = new StreamingClient(
+                $this->loop,
+                $this->client->getCommandBus(),
+                $this->client->stream()
+            );
+        }
+
+        return $this->streamingClient;
     }
 
     public function tweet(string $tweet): TweetInterface

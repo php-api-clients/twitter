@@ -18,7 +18,7 @@ $client = (new AsyncClient(
 ))->withAccessToken(
     $config['access_token']['token'],
     $config['access_token']['secret']
-);
+)->stream();
 
 $counters = [
     DeletedTweet::class => 0,
@@ -43,7 +43,7 @@ $loop->addPeriodicTimer(1, function () use (&$counters) {
     }
 });
 
-$client->sampleStream()->subscribeCallback(function ($document) use(&$counters) {
+$client->sample()->subscribeCallback(function ($document) use(&$counters) {
     $class = get_class($document);
 
     if (!isset($counters[$class])) {

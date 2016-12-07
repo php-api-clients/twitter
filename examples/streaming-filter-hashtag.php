@@ -1,18 +1,15 @@
 <?php
 
-use React\EventLoop\Factory;
-use ApiClients\Client\Twitter\AsyncClient;
+use ApiClients\Client\Twitter\Client;
 use function ApiClients\Foundation\resource_pretty_print;
 use function React\Promise\all;
 
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 $config = require 'resolve_config.php';
 
-$loop = Factory::create();
-$client = (new AsyncClient(
+$client = (new Client(
     $config['consumer']['key'],
-    $config['consumer']['secret'],
-    $loop
+    $config['consumer']['secret']
 ))->withAccessToken(
     $config['access_token']['token'],
     $config['access_token']['secret']
@@ -29,10 +26,11 @@ if (count($argv) > 1) {
 
 $hashtags = array_unique($hashtags);
 
-$client->filtered([
-    'track' => implode(',', $hashtags),
-])->subscribeCallback(function ($document) {
-    resource_pretty_print($document);
-});
-
-$loop->run();
+$client->filtered(
+    function ($document) {
+        resource_pretty_print($document);
+    },
+    [
+        'track' => implode(',', $hashtags),
+    ]
+);

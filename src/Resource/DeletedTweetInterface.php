@@ -6,6 +6,8 @@ use ApiClients\Foundation\Resource\ResourceInterface;
 
 interface DeletedTweetInterface extends ResourceInterface
 {
+    const HYDRATE_CLASS = 'DeletedTweet';
+
     /**
      * @return array
      */

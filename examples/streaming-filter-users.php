@@ -1,19 +1,15 @@
 <?php
 
-use GuzzleHttp\Exception\ClientException;
-use React\EventLoop\Factory;
-use ApiClients\Client\Twitter\AsyncClient;
-use ApiClients\Client\Twitter\Resource\UserInterface;
+use ApiClients\Client\Twitter\Client;
 use function ApiClients\Foundation\resource_pretty_print;
+use function React\Promise\all;
 
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 $config = require 'resolve_config.php';
 
-$loop = Factory::create();
-$client = (new AsyncClient(
+$client = (new Client(
     $config['consumer']['key'],
-    $config['consumer']['secret'],
-    $loop
+    $config['consumer']['secret']
 ))->withAccessToken(
     $config['access_token']['token'],
     $config['access_token']['secret']
@@ -32,10 +28,16 @@ if (count($argv) > 1) {
 
 $users = array_unique($users);
 
+$userIds = [];
 foreach ($users as $user) {
-    $client->user($user)->done(function (UserInterface $user) {
-        resource_pretty_print($user);
-    });
+    $userIds[] = $client->user($user)->idStr();
 }
 
-$loop->run();
+$client->stream()->filtered(
+    function ($document) {
+        resource_pretty_print($document);
+    },
+    [
+        'follow' => implode(',', $userIds),
+    ]
+);

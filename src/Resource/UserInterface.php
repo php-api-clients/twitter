@@ -7,6 +7,8 @@ use DateTime;
 
 interface UserInterface extends ResourceInterface
 {
+    const HYDRATE_CLASS = 'User';
+
     /**
      * @return int
      */

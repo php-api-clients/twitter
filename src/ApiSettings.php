@@ -11,7 +11,7 @@ use ApiClients\Foundation\Transport\UserAgentStrategies;
 use ApiClients\Foundation\Oauth1\Options as Oauth1Options;
 use ApiClients\Tools\Psr7\Oauth1\Definition;
 
-class ApiSettings
+final class ApiSettings
 {
     const NAMESPACE = 'ApiClients\\Client\\Twitter\\Resource';
 
