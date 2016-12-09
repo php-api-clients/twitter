@@ -2,26 +2,44 @@
 
 namespace ApiClients\Client\Twitter;
 
+use ApiClients\Foundation\Client;
 use ApiClients\Foundation\Factory;
 use ApiClients\Foundation\Hydrator\CommandBus\Command\HydrateCommand;
-use ApiClients\Foundation\Client;
+use ApiClients\Foundation\Oauth1\Middleware\Oauth1Middleware;
+use ApiClients\Foundation\Oauth1\Options as Oauth1Options;
+use ApiClients\Foundation\Options;
 use ApiClients\Foundation\Transport\CommandBus\Command\RequestCommand;
 use ApiClients\Foundation\Transport\CommandBus\Command\StreamingRequestCommand;
+use ApiClients\Foundation\Transport\Options as TransportOptions;
+use ApiClients\Tools\Psr7\Oauth1\Definition;
 use GuzzleHttp\Psr7\Request;
-use JacobKiers\OAuth\Consumer\Consumer;
-use JacobKiers\OAuth\Token\Token;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use React\EventLoop\LoopInterface;
 use React\Promise\PromiseInterface;
-use function React\Promise\resolve;
 use Rx\Extra\Operator\CutOperator;
 use Rx\Observable;
 use Rx\React\Promise;
+use function React\Promise\resolve;
 
-class AsyncClient
+final class AsyncClient
 {
     const STREAM_DELIMITER = "\r\n";
+
+    /**
+     * @var string
+     */
+    private $consumerKey;
+
+    /**
+     * @var string
+     */
+    private $consumerSecret;
+
+    /**
+     * @var LoopInterface
+     */
+    private $loop;
 
     /**
      * @var Client
@@ -31,22 +49,62 @@ class AsyncClient
     public function __construct(
         string $consumerKey,
         string $consumerSecret,
-        string $accessToken,
-        string $accessTokenSecret,
         LoopInterface $loop,
+        array $options = [],
         Client $client = null
     ) {
+        $this->consumerKey = $consumerKey;
+        $this->consumerSecret = $consumerSecret;
+        $this->loop = $loop;
+
         if (!($client instanceof Client)) {
             $this->options = ApiSettings::getOptions(
                 $consumerKey,
                 $consumerSecret,
-                $accessToken,
-                $accessTokenSecret,
-                'Async'
+                'Async',
+                $options
             );
-            $client = Factory::create($loop, $this->options);
+
+            $client = Factory::create($this->loop, $this->options);
         }
+
         $this->client = $client;
+    }
+
+    public function withAccessToken(string $accessToken, string $accessTokenSecret): AsyncClient
+    {
+        $options = $this->options;
+        // @codingStandardsIgnoreStart
+        $options[Options::TRANSPORT_OPTIONS][TransportOptions::DEFAULT_REQUEST_OPTIONS][Oauth1Middleware::class][Oauth1Options::ACCESS_TOKEN] = new Definition\AccessToken($accessToken);
+        $options[Options::TRANSPORT_OPTIONS][TransportOptions::DEFAULT_REQUEST_OPTIONS][Oauth1Middleware::class][Oauth1Options::TOKEN_SECRET] = new Definition\TokenSecret($accessTokenSecret);
+        // @codingStandardsIgnoreEnd
+
+        return new self(
+            $this->consumerKey,
+            $this->consumerSecret,
+            $this->loop,
+            $options
+        );
+    }
+
+    public function withOutAccessToken(): AsyncClient
+    {
+        $options = $this->options;
+        // @codingStandardsIgnoreStart
+        if (isset($options[Options::TRANSPORT_OPTIONS][TransportOptions::DEFAULT_REQUEST_OPTIONS][Oauth1Middleware::class][Oauth1Options::ACCESS_TOKEN])) {
+            unset($options[Options::TRANSPORT_OPTIONS][TransportOptions::DEFAULT_REQUEST_OPTIONS][Oauth1Middleware::class][Oauth1Options::ACCESS_TOKEN]);
+        }
+        if (isset($options[Options::TRANSPORT_OPTIONS][TransportOptions::DEFAULT_REQUEST_OPTIONS][Oauth1Middleware::class][Oauth1Options::TOKEN_SECRET])) {
+            unset($options[Options::TRANSPORT_OPTIONS][TransportOptions::DEFAULT_REQUEST_OPTIONS][Oauth1Middleware::class][Oauth1Options::TOKEN_SECRET]);
+        }
+        // @codingStandardsIgnoreEnd
+
+        return new self(
+            $this->consumerKey,
+            $this->consumerSecret,
+            $this->loop,
+            $options
+        );
     }
 
     public function user(string $user): PromiseInterface

@@ -31,24 +31,20 @@ class ApiSettings
     public static function getOptions(
         string $consumerKey,
         string $consumerSecret,
-        string $accessToken,
-        string $accessTokenSecret,
-        string $suffix
+        string $suffix,
+        array $suppliedOptions = []
     ): array {
-        $options = self::TRANSPORT_OPTIONS;
+        // @codingStandardsIgnoreStart
+        $options = array_replace_recursive(self::TRANSPORT_OPTIONS, $suppliedOptions);
         $options[Options::HYDRATOR_OPTIONS][HydratorOptions::NAMESPACE_SUFFIX] = $suffix;
-        $options[Options::TRANSPORT_OPTIONS][TransportOptions::MIDDLEWARE] = [
-            Oauth1Middleware::class,
-            JsonDecodeMiddleware::class,
-        ];
-        $options[Options::TRANSPORT_OPTIONS][TransportOptions::DEFAULT_REQUEST_OPTIONS] = [
-            Oauth1Middleware::class => [
-                Oauth1Options::CONSUMER_KEY => new Definition\ConsumerKey($consumerKey),
-                Oauth1Options::CONSUMER_SECRET => new Definition\ConsumerSecret($consumerSecret),
-                Oauth1Options::ACCESS_TOKEN => new Definition\AccessToken($accessToken),
-                Oauth1Options::TOKEN_SECRET => new Definition\TokenSecret($accessTokenSecret),
-            ],
-        ];
+        $options[Options::TRANSPORT_OPTIONS][TransportOptions::MIDDLEWARE][] = Oauth1Middleware::class;
+        $options[Options::TRANSPORT_OPTIONS][TransportOptions::MIDDLEWARE][] = JsonDecodeMiddleware::class;
+        $options[Options::TRANSPORT_OPTIONS][TransportOptions::MIDDLEWARE] = array_unique(
+            $options[Options::TRANSPORT_OPTIONS][TransportOptions::MIDDLEWARE]
+        );
+        $options[Options::TRANSPORT_OPTIONS][TransportOptions::DEFAULT_REQUEST_OPTIONS][Oauth1Middleware::class][Oauth1Options::CONSUMER_KEY] = new Definition\ConsumerKey($consumerKey);
+        $options[Options::TRANSPORT_OPTIONS][TransportOptions::DEFAULT_REQUEST_OPTIONS][Oauth1Middleware::class][Oauth1Options::CONSUMER_SECRET] = new Definition\ConsumerSecret($consumerSecret);
+        // @codingStandardsIgnoreEnd
         return $options;
     }
 }
