@@ -2453,12 +2453,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/resource-test-utilities.git",
-                "reference": "8224a43bb4fb6845ee293154c711595d6e0f478e"
+                "reference": "ce99bb15484097fd7bd1db3152ba2528eb997e45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/resource-test-utilities/zipball/8224a43bb4fb6845ee293154c711595d6e0f478e",
-                "reference": "8224a43bb4fb6845ee293154c711595d6e0f478e",
+                "url": "https://api.github.com/repos/php-api-clients/resource-test-utilities/zipball/ce99bb15484097fd7bd1db3152ba2528eb997e45",
+                "reference": "ce99bb15484097fd7bd1db3152ba2528eb997e45",
                 "shasum": ""
             },
             "require": {
@@ -2492,7 +2492,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2016-12-09 20:46:06"
+            "time": "2016-12-09 21:40:03"
         },
         {
             "name": "api-clients/test-utilities",
