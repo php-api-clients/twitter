@@ -3,26 +3,18 @@
 namespace ApiClients\Client\Twitter;
 
 use ApiClients\Foundation\Client;
-use ApiClients\Foundation\Factory;
 use ApiClients\Foundation\Hydrator\CommandBus\Command\HydrateCommand;
-use ApiClients\Foundation\Oauth1\Middleware\Oauth1Middleware;
-use ApiClients\Foundation\Oauth1\Options as Oauth1Options;
-use ApiClients\Foundation\Options;
-use ApiClients\Foundation\Transport\CommandBus\Command\RequestCommand;
 use ApiClients\Foundation\Transport\CommandBus\Command\StreamingRequestCommand;
-use ApiClients\Foundation\Transport\Options as TransportOptions;
 use ApiClients\Tools\Psr7\Oauth1\Definition;
 use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\RequestInterface;
-use Psr\Http\Message\ResponseInterface;
 use React\EventLoop\LoopInterface;
-use React\Promise\PromiseInterface;
 use Rx\Extra\Operator\CutOperator;
 use Rx\Observable;
 use Rx\React\Promise;
 use function React\Promise\resolve;
 
-final class AsyncStreamingClient
+final class AsyncStreamingClient implements AsyncStreamingClientInterface
 {
     const STREAM_DELIMITER = "\r\n";
 

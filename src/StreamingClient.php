@@ -4,13 +4,13 @@ namespace ApiClients\Client\Twitter;
 
 use ApiClients\Foundation\Hydrator\CommandBus\Command\BuildSyncFromAsyncCommand;
 use ApiClients\Foundation\Resource\ResourceInterface;
-use ApiClients\Tools\CommandBus\CommandBus;
+use ApiClients\Tools\CommandBus\CommandBusInterface;
 use React\EventLoop\LoopInterface;
 use ReflectionObject;
 use Rx\ObservableInterface;
 use Rx\React\Promise;
 
-final class StreamingClient
+final class StreamingClient implements StreamingClientInterface
 {
     /**
      * @var LoopInterface
@@ -18,12 +18,12 @@ final class StreamingClient
     protected $loop;
 
     /**
-     * @var CommandBus
+     * @var CommandBusInterface
      */
     protected $commandBus;
 
     /**
-     * @var AsyncStreamingClient
+     * @var AsyncStreamingClientInterface
      */
     protected $client;
 
@@ -35,11 +35,14 @@ final class StreamingClient
     /**
      * StreamingClient constructor.
      * @param LoopInterface $loop
-     * @param CommandBus $commandBus
-     * @param AsyncStreamingClient $client
+     * @param CommandBusInterface $commandBus
+     * @param AsyncStreamingClientInterface $client
      */
-    public function __construct(LoopInterface $loop, CommandBus $commandBus, AsyncStreamingClient $client)
-    {
+    public function __construct(
+        LoopInterface $loop,
+        CommandBusInterface $commandBus,
+        AsyncStreamingClientInterface $client
+    ) {
         $this->loop = $loop;
         $this->commandBus = $commandBus;
         $this->client = $client;
