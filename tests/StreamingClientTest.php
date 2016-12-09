@@ -44,7 +44,7 @@ class StreamingClientTest extends TestCase
         $listener = function () {};
         $loop = Factory::create();
         $commandBus = $this->prophesize(CommandBusInterface::class);
-        $commandBus->handle(Argument::type(BuildSyncFromAsyncCommand::class))->willReturn(\React\Promise\reject());
+        $commandBus->handle(Argument::type(BuildSyncFromAsyncCommand::class))->shouldBeCalled()->willReturn(\React\Promise\reject());
         /*$container = ContainerBuilder::buildDevContainer();
         $container->set(LoopInterface::class, Factory::create());
         $container->set(CommandBusInterface::class, $commandBus->reveal());
