@@ -59,4 +59,4 @@ script:
   - if [ "$coverage" = "true" ]; then make ci-with-coverage; fi;
 
 ## Gather coverage and set it to coverage servers
-after_script: make ci-coverage
+after_script: make travis-coverage
