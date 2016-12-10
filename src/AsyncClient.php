@@ -112,6 +112,15 @@ final class AsyncClient implements AsyncClientInterface
         return $this->client->getFromContainer(CommandBusInterface::class);
     }
 
+    public function profile(): PromiseInterface
+    {
+        return $this->client->handle(new RequestCommand(
+            new Request('GET', 'account/verify_credentials.json')
+        ))->then(function (ResponseInterface $response) {
+            return resolve($this->client->handle(new HydrateCommand('Profile', $response->getBody()->getJson())));
+        });
+    }
+
     public function user(string $user): PromiseInterface
     {
         return $this->client->handle(new RequestCommand(

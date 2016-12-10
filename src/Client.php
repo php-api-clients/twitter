@@ -2,6 +2,7 @@
 
 namespace ApiClients\Client\Twitter;
 
+use ApiClients\Client\Twitter\Resource\ProfileInterface;
 use ApiClients\Client\Twitter\Resource\TweetInterface;
 use ApiClients\Client\Twitter\Resource\UserInterface;
 use React\EventLoop\Factory as LoopFactory;
@@ -64,6 +65,14 @@ final class Client implements ClientInterface
     {
         return await(
             $this->client->tweet($tweet),
+            $this->loop
+        );
+    }
+
+    public function profile(): ProfileInterface
+    {
+        return await(
+            $this->client->profile(),
             $this->loop
         );
     }
