@@ -10,7 +10,6 @@ use ApiClients\Foundation\Oauth1\Options as Oauth1Options;
 use ApiClients\Foundation\Options;
 use ApiClients\Foundation\Transport\CommandBus\Command\RequestCommand;
 use ApiClients\Foundation\Transport\Options as TransportOptions;
-use ApiClients\Tools\CommandBus\CommandBus;
 use ApiClients\Tools\CommandBus\CommandBusInterface;
 use ApiClients\Tools\Psr7\Oauth1\Definition;
 use GuzzleHttp\Psr7\Request;

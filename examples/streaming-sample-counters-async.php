@@ -1,11 +1,11 @@
 <?php
 
+use ApiClients\Client\Twitter\AsyncClient;
 use ApiClients\Client\Twitter\Resource\Async\DeletedTweet;
 use ApiClients\Client\Twitter\Resource\Async\Tweet;
 use React\EventLoop\Factory;
-use ApiClients\Client\Twitter\AsyncClient;
-use function ApiClients\Foundation\resource_pretty_print;
 use React\EventLoop\Timer\TimerInterface;
+use function ApiClients\Foundation\resource_pretty_print;
 
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 $config = require 'resolve_config.php';

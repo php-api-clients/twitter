@@ -4,9 +4,7 @@ namespace ApiClients\Client\Twitter;
 
 use ApiClients\Client\Twitter\Resource\TweetInterface;
 use ApiClients\Client\Twitter\Resource\UserInterface;
-use React\EventLoop\Factory as LoopFactory;
 use function Clue\React\Block\await;
-use React\EventLoop\LoopInterface;
 
 interface ClientInterface
 {

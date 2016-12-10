@@ -1,9 +1,9 @@
 <?php
 
-use GuzzleHttp\Exception\ClientException;
-use React\EventLoop\Factory;
 use ApiClients\Client\Twitter\AsyncClient;
 use ApiClients\Client\Twitter\Resource\UserInterface;
+use GuzzleHttp\Exception\ClientException;
+use React\EventLoop\Factory;
 use function ApiClients\Foundation\resource_pretty_print;
 
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php';

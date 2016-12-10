@@ -2,9 +2,9 @@
 
 namespace ApiClients\Tests\Client\Twitter\Resource\Sync;
 
-use ApiClients\Tools\ResourceTestUtilities\AbstractResourceTest;
 use ApiClients\Client\Twitter\ApiSettings;
 use ApiClients\Client\Twitter\Resource\Tweet;
+use ApiClients\Tools\ResourceTestUtilities\AbstractResourceTest;
 
 class TweetTest extends AbstractResourceTest
 {

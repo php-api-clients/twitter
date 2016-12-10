@@ -2,9 +2,9 @@
 
 namespace ApiClients\Tests\Client\Twitter\Resource\Async;
 
-use ApiClients\Tools\ResourceTestUtilities\AbstractResourceTest;
 use ApiClients\Client\Twitter\ApiSettings;
 use ApiClients\Client\Twitter\Resource\DeletedTweet;
+use ApiClients\Tools\ResourceTestUtilities\AbstractResourceTest;
 
 class DeletedTweetTest extends AbstractResourceTest
 {

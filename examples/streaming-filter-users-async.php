@@ -1,8 +1,7 @@
 <?php
 
-use React\EventLoop\Factory;
 use ApiClients\Client\Twitter\AsyncClient;
-use ApiClients\Client\Twitter\Resource\UserInterface;
+use React\EventLoop\Factory;
 use function ApiClients\Foundation\resource_pretty_print;
 use function React\Promise\all;
 
