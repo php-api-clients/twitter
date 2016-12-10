@@ -18,7 +18,7 @@ composer require api-clients/twitter
 
 # Usage
 
-```
+```php
 <?php
 
 use React\EventLoop\Factory;
