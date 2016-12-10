@@ -100,4 +100,15 @@ abstract class Profile extends AbstractResource implements ProfileInterface
     {
         return $this->description;
     }
+
+    /**
+     * @param string $name
+     * @return ProfileInterface
+     */
+    public function withName(string $name): ProfileInterface
+    {
+        $clone = clone $this;
+        $clone->name = $name;
+        return $clone;
+    }
 }

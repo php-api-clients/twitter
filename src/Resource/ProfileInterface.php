@@ -42,4 +42,10 @@ interface ProfileInterface extends ResourceInterface
      * @return string
      */
     public function description() : string;
+
+    /**
+     * @param string $name
+     * @return static
+     */
+    public function withName(string $name);
 }
