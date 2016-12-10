@@ -1,0 +1,4 @@
+class: Warning
+properties:
+  status: array
+  timestamp_ms: string
