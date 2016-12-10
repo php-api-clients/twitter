@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "273c96ea587dfbeb8b69df3bb3af40ad",
-    "content-hash": "182c6488cc8bef9742ad01e9eb5d72e1",
+    "hash": "7d5c24eb61160556710a27929470ea25",
+    "content-hash": "c1c63946e0cad33d4da87ca976b8a7d6",
     "packages": [
         {
             "name": "api-clients/command-bus",
-            "version": "1.0.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/command-bus.git",
-                "reference": "e9be8413b956aad66c3c8063c34ac2d3490e5af0"
+                "reference": "18669ef197076a67386cda9f5b64e901c1484b60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/command-bus/zipball/e9be8413b956aad66c3c8063c34ac2d3490e5af0",
-                "reference": "e9be8413b956aad66c3c8063c34ac2d3490e5af0",
+                "url": "https://api.github.com/repos/php-api-clients/command-bus/zipball/18669ef197076a67386cda9f5b64e901c1484b60",
+                "reference": "18669ef197076a67386cda9f5b64e901c1484b60",
                 "shasum": ""
             },
             "require": {
@@ -33,7 +33,7 @@
                 "wyrihaximus/ticking-promise": "^1.6"
             },
             "require-dev": {
-                "api-clients/test-utilities": "^1.0",
+                "api-clients/test-utilities": "^2.0",
                 "php-di/php-di": "^5.4"
             },
             "type": "library",
@@ -53,7 +53,7 @@
                 }
             ],
             "description": "Light weight wrapper around league/tactician adding promised based interface(s) and next tick execution",
-            "time": "2016-12-04 22:58:41"
+            "time": "2016-12-08 08:36:09"
         },
         {
             "name": "api-clients/events",
@@ -102,16 +102,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/foundation.git",
-                "reference": "123c6738bd66ecdef6093b233cef8385d7183345"
+                "reference": "374ee558f9f878fba544b0f19f6752f0edacdae5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/foundation/zipball/123c6738bd66ecdef6093b233cef8385d7183345",
-                "reference": "123c6738bd66ecdef6093b233cef8385d7183345",
+                "url": "https://api.github.com/repos/php-api-clients/foundation/zipball/374ee558f9f878fba544b0f19f6752f0edacdae5",
+                "reference": "374ee558f9f878fba544b0f19f6752f0edacdae5",
                 "shasum": ""
             },
             "require": {
-                "api-clients/command-bus": "^1.0",
+                "api-clients/command-bus": "^2.0",
+                "api-clients/events": "dev-master",
                 "api-clients/hydrator": "dev-master",
                 "api-clients/service": "dev-master",
                 "api-clients/transport": "dev-master",
@@ -120,7 +121,7 @@
                 "php-di/php-di": "^5.4"
             },
             "require-dev": {
-                "api-clients/test-utilities": "^1.0"
+                "api-clients/test-utilities": "^2.0"
             },
             "suggest": {
                 "api-clients/resource-generator": "Easy wireframing of resources",
@@ -143,7 +144,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2016-12-04 23:37:24"
+            "time": "2016-12-08 21:18:19"
         },
         {
             "name": "api-clients/hydrator",
@@ -151,17 +152,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/hydrator.git",
-                "reference": "111e215b76115449effc40ac8a6a776c203e563d"
+                "reference": "e56b46428006271d57e5f99a47ce566ded00b6a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/hydrator/zipball/111e215b76115449effc40ac8a6a776c203e563d",
-                "reference": "111e215b76115449effc40ac8a6a776c203e563d",
+                "url": "https://api.github.com/repos/php-api-clients/hydrator/zipball/e56b46428006271d57e5f99a47ce566ded00b6a2",
+                "reference": "e56b46428006271d57e5f99a47ce566ded00b6a2",
                 "shasum": ""
             },
             "require": {
-                "api-clients/command-bus": "^1.0",
-                "api-clients/resource": "^1.0",
+                "api-clients/command-bus": "^2.0",
+                "api-clients/resource": "^3.0",
                 "container-interop/container-interop": "^1.1",
                 "doctrine/annotations": "^1.2",
                 "doctrine/cache": "^1.6",
@@ -171,7 +172,7 @@
                 "wyrihaximus/ticking-promise": "^1.6"
             },
             "require-dev": {
-                "api-clients/test-utilities": "^1.0",
+                "api-clients/test-utilities": "^2.0",
                 "php-di/php-di": "^5.4",
                 "phpbench/phpbench": "^0.11"
             },
@@ -208,7 +209,7 @@
                 }
             ],
             "description": "Hydrator wrapping ocramius/generated-hydrator specifically for api clients",
-            "time": "2016-12-07 21:32:49"
+            "time": "2016-12-09 16:58:28"
         },
         {
             "name": "api-clients/middleware",
@@ -348,25 +349,25 @@
         },
         {
             "name": "api-clients/resource",
-            "version": "1.0.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/resource.git",
-                "reference": "9441a2e42bbe555c46d9b782bbc10edf6d06f994"
+                "reference": "ac000b6d1fa66b50eb8acde3d8ba333e7fde3233"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/resource/zipball/9441a2e42bbe555c46d9b782bbc10edf6d06f994",
-                "reference": "9441a2e42bbe555c46d9b782bbc10edf6d06f994",
+                "url": "https://api.github.com/repos/php-api-clients/resource/zipball/ac000b6d1fa66b50eb8acde3d8ba333e7fde3233",
+                "reference": "ac000b6d1fa66b50eb8acde3d8ba333e7fde3233",
                 "shasum": ""
             },
             "require": {
-                "api-clients/command-bus": "^1.0",
+                "api-clients/command-bus": "^2.0",
                 "clue/block-react": "^1.1",
                 "php": "^7.0"
             },
             "require-dev": {
-                "api-clients/test-utilities": "^1.0"
+                "api-clients/test-utilities": "^2.0"
             },
             "type": "library",
             "autoload": {
@@ -388,7 +389,7 @@
                 }
             ],
             "description": "Abstract resource",
-            "time": "2016-12-04 23:17:56"
+            "time": "2016-12-09 16:48:22"
         },
         {
             "name": "api-clients/rx-operators",
@@ -475,18 +476,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/transport.git",
-                "reference": "99bad9f0a3522af38a3c303ac005d55acc3bfc86"
+                "reference": "8897e8749e2e3b51be52717f56282a2db9ace761"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/transport/zipball/99bad9f0a3522af38a3c303ac005d55acc3bfc86",
-                "reference": "99bad9f0a3522af38a3c303ac005d55acc3bfc86",
+                "url": "https://api.github.com/repos/php-api-clients/transport/zipball/8897e8749e2e3b51be52717f56282a2db9ace761",
+                "reference": "8897e8749e2e3b51be52717f56282a2db9ace761",
                 "shasum": ""
             },
             "require": {
                 "api-clients/events": "dev-master",
                 "api-clients/middleware": "^1.0",
-                "api-clients/resource": "^1.0",
+                "api-clients/resource": "^3.0",
                 "api-clients/service": "dev-master",
                 "clue/block-react": "^1.1",
                 "clue/buzz-react": "^1.1",
@@ -503,7 +504,7 @@
                 "wyrihaximus/ticking-promise": "^1.6"
             },
             "require-dev": {
-                "api-clients/test-utilities": "^1.0",
+                "api-clients/test-utilities": "^2.0",
                 "php-di/php-di": "^5.4"
             },
             "suggest": {
@@ -535,7 +536,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2016-12-05 11:37:52"
+            "time": "2016-12-09 20:43:48"
         },
         {
             "name": "clue/block-react",
@@ -2399,18 +2400,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/resource-generator.git",
-                "reference": "c4e9ab64d4c89acb93c61241b250124dc88d3376"
+                "reference": "0065b72b65ca71821682730999f002f33d222226"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/resource-generator/zipball/c4e9ab64d4c89acb93c61241b250124dc88d3376",
-                "reference": "c4e9ab64d4c89acb93c61241b250124dc88d3376",
+                "url": "https://api.github.com/repos/php-api-clients/resource-generator/zipball/0065b72b65ca71821682730999f002f33d222226",
+                "reference": "0065b72b65ca71821682730999f002f33d222226",
                 "shasum": ""
             },
             "require": {
                 "api-clients/foundation": "dev-master",
                 "api-clients/hydrator": "dev-master",
-                "api-clients/resource": "^1.0",
+                "api-clients/resource": "^3.0",
                 "api-clients/resource-test-utilities": "dev-master",
                 "doctrine/inflector": "^1.1",
                 "friendsofphp/php-cs-fixer": "1.11.8",
@@ -2419,7 +2420,7 @@
                 "symfony/yaml": "^2.8||^3.0"
             },
             "require-dev": {
-                "api-clients/test-utilities": "^1.0"
+                "api-clients/test-utilities": "^2.0"
             },
             "bin": [
                 "api-client-resource-generator"
@@ -2444,7 +2445,7 @@
                 }
             ],
             "description": "Resource from YAML generation tool",
-            "time": "2016-12-04 23:43:36"
+            "time": "2016-12-09 20:48:07"
         },
         {
             "name": "api-clients/resource-test-utilities",
@@ -2452,25 +2453,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/resource-test-utilities.git",
-                "reference": "6b74421cd3947cf1902e2319829ab01d32b0c2c4"
+                "reference": "ce99bb15484097fd7bd1db3152ba2528eb997e45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/resource-test-utilities/zipball/6b74421cd3947cf1902e2319829ab01d32b0c2c4",
-                "reference": "6b74421cd3947cf1902e2319829ab01d32b0c2c4",
+                "url": "https://api.github.com/repos/php-api-clients/resource-test-utilities/zipball/ce99bb15484097fd7bd1db3152ba2528eb997e45",
+                "reference": "ce99bb15484097fd7bd1db3152ba2528eb997e45",
                 "shasum": ""
             },
             "require": {
                 "api-clients/foundation": "dev-master",
                 "api-clients/hydrator": "dev-master",
-                "api-clients/resource": "^1.0",
+                "api-clients/resource": "^3.0",
                 "doctrine/annotations": "^1.2",
                 "doctrine/inflector": "^1.1",
                 "php": "^7.0",
                 "phpdocumentor/reflection-docblock": "^3.0 || ^2.0"
             },
             "require-dev": {
-                "api-clients/test-utilities": "^1.0"
+                "api-clients/test-utilities": "^2.0"
             },
             "suggest": {
                 "api-clients/resource-generator": "Easy wireframing of resources"
@@ -2491,25 +2492,24 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2016-12-04 23:40:48"
+            "time": "2016-12-09 21:40:03"
         },
         {
             "name": "api-clients/test-utilities",
-            "version": "1.0.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/test-utilities.git",
-                "reference": "26e92e4c1bb132cd78d247fa210f2bb2308488f8"
+                "reference": "0b68bdc9e29ed20856034952861db58838b019f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/test-utilities/zipball/26e92e4c1bb132cd78d247fa210f2bb2308488f8",
-                "reference": "26e92e4c1bb132cd78d247fa210f2bb2308488f8",
+                "url": "https://api.github.com/repos/php-api-clients/test-utilities/zipball/0b68bdc9e29ed20856034952861db58838b019f8",
+                "reference": "0b68bdc9e29ed20856034952861db58838b019f8",
                 "shasum": ""
             },
             "require": {
                 "clue/block-react": "^1.1",
-                "humbug/humbug": "1.0.0-alpha2",
                 "jakub-onderka/php-console-highlighter": "^0.3.2",
                 "jakub-onderka/php-parallel-lint": "^0.9.2",
                 "phake/phake": "^2.3",
@@ -2534,7 +2534,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2016-12-04 22:25:39"
+            "time": "2016-12-08 07:01:48"
         },
         {
             "name": "doctrine/inflector",
@@ -2716,73 +2716,6 @@
             "time": "2016-08-16 23:31:05"
         },
         {
-            "name": "humbug/humbug",
-            "version": "1.0.0-alpha2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/padraic/humbug.git",
-                "reference": "06b1c059e432dab8c22c36bc8b6e1ffc7e587c07"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/padraic/humbug/zipball/06b1c059e432dab8c22c36bc8b6e1ffc7e587c07",
-                "reference": "06b1c059e432dab8c22c36bc8b6e1ffc7e587c07",
-                "shasum": ""
-            },
-            "require": {
-                "padraic/phar-updater": "^1.0.0",
-                "padraic/phpunit-accelerator": "^1.0.2",
-                "padraic/phpunit-extensions": "^1.0.0",
-                "php": ">=5.4.0",
-                "phpunit/phpunit": "^4.5|^5.0",
-                "sebastian/diff": "^1.1",
-                "symfony/console": "^2.6|^3.0",
-                "symfony/event-dispatcher": "^2.6|^3.0",
-                "symfony/finder": "^2.6|^3.0",
-                "symfony/process": "^2.6|^3.0"
-            },
-            "require-dev": {
-                "behat/behat": "^3.0.15",
-                "mikey179/vfsstream": "^1.4",
-                "mockery/mockery": "^0.9",
-                "symfony/filesystem": "^2.6|^3.0"
-            },
-            "bin": [
-                "bin/humbug"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Humbug\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Pádraic Brady",
-                    "email": "padraic.brady@gmail.com",
-                    "homepage": "http://blog.astrumfutura.com"
-                }
-            ],
-            "description": "Humbug is a Mutation Testing framework for PHP. Whereas Code Coverage can tell you what code your tests are executing, Mutation Testing is intended to help you judge how well your unit tests actually perform and where they could be improved.",
-            "homepage": "https://github.com/padraic/humbug",
-            "keywords": [
-                "coverage",
-                "mutation testing",
-                "testing",
-                "unit testing"
-            ],
-            "time": "2016-08-01 10:27:00"
-        },
-        {
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {
@@ -2957,220 +2890,6 @@
                 "object graph"
             ],
             "time": "2016-10-31 17:19:45"
-        },
-        {
-            "name": "padraic/humbug_get_contents",
-            "version": "1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/padraic/file_get_contents.git",
-                "reference": "66797199019d0cb4529cb8d29c6f0b4c5085b53a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/padraic/file_get_contents/zipball/66797199019d0cb4529cb8d29c6f0b4c5085b53a",
-                "reference": "66797199019d0cb4529cb8d29c6f0b4c5085b53a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Humbug\\": "src/Humbug/"
-                },
-                "files": [
-                    "src/function.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Pádraic Brady",
-                    "email": "padraic.brady@gmail.com",
-                    "homepage": "http://blog.astrumfutura.com"
-                }
-            ],
-            "description": "Secure wrapper for accessing HTTPS resources with file_get_contents for PHP 5.3+",
-            "homepage": "https://github.com/padraic/file_get_contents",
-            "keywords": [
-                "download",
-                "file_get_contents",
-                "http",
-                "https",
-                "ssl",
-                "tls"
-            ],
-            "time": "2015-04-22 18:45:00"
-        },
-        {
-            "name": "padraic/phar-updater",
-            "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/padraic/phar-updater.git",
-                "reference": "c17eeb3887dc4269d1b4837dc875d39e9f8149a8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/padraic/phar-updater/zipball/c17eeb3887dc4269d1b4837dc875d39e9f8149a8",
-                "reference": "c17eeb3887dc4269d1b4837dc875d39e9f8149a8",
-                "shasum": ""
-            },
-            "require": {
-                "padraic/humbug_get_contents": "^1.0",
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Humbug\\SelfUpdate\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Pádraic Brady",
-                    "email": "padraic.brady@gmail.com",
-                    "homepage": "http://blog.astrumfutura.com"
-                }
-            ],
-            "description": "A thing to make PHAR self-updating easy and secure.",
-            "keywords": [
-                "humbug",
-                "phar",
-                "self-update",
-                "update"
-            ],
-            "time": "2016-01-05 23:08:01"
-        },
-        {
-            "name": "padraic/phpunit-accelerator",
-            "version": "v1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/padraic/phpunit-accelerator.git",
-                "reference": "0b3b58e6e9a794eec22df712776058850d5fe0c1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/padraic/phpunit-accelerator/zipball/0b3b58e6e9a794eec22df712776058850d5fe0c1",
-                "reference": "0b3b58e6e9a794eec22df712776058850d5fe0c1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "phpunit/phpunit": ">=3.7"
-            },
-            "replace": {
-                "mybuilder/phpunit-accelerator": "1.0.x"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "MyBuilder\\PhpunitAccelerator\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Keyvan Akbary",
-                    "email": "keyvan@mybuilder.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Padraic Brady",
-                    "email": "padraic.brady@gmail.com",
-                    "role": "Contributor"
-                }
-            ],
-            "description": "PHPUnit Accelerator: Speeds up PHPUnit by freeing memory after test runs",
-            "keywords": [
-                "accelerator",
-                "fast",
-                "free",
-                "memory",
-                "phpunit",
-                "property"
-            ],
-            "time": "2015-01-15 21:18:21"
-        },
-        {
-            "name": "padraic/phpunit-extensions",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/padraic/phpunit-extensions.git",
-                "reference": "a6942fa3ada5487e1b9a409c235013a677c2689b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/padraic/phpunit-extensions/zipball/a6942fa3ada5487e1b9a409c235013a677c2689b",
-                "reference": "a6942fa3ada5487e1b9a409c235013a677c2689b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0",
-                "phpunit/phpunit": "^4.0|^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Humbug\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Pádraic Brady",
-                    "email": "padraic.brady@gmail.com",
-                    "homepage": "http://blog.astrumfutura.com"
-                }
-            ],
-            "description": "Collection of Listeners to log and manipulate test run order",
-            "keywords": [
-                "extension",
-                "humbug",
-                "listener",
-                "phpunit",
-                "testing",
-                "tests"
-            ],
-            "time": "2016-01-06 12:16:20"
         },
         {
             "name": "phake/phake",
@@ -3685,16 +3404,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.2",
+            "version": "5.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "336aff0ac52e306c98e7455bc3e8d7b0bf777a5e"
+                "reference": "de164acc2f2bb0b79beb892a36260264b2a03233"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/336aff0ac52e306c98e7455bc3e8d7b0bf777a5e",
-                "reference": "336aff0ac52e306c98e7455bc3e8d7b0bf777a5e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/de164acc2f2bb0b79beb892a36260264b2a03233",
+                "reference": "de164acc2f2bb0b79beb892a36260264b2a03233",
                 "shasum": ""
             },
             "require": {
@@ -3705,7 +3424,7 @@
                 "ext-xml": "*",
                 "myclabs/deep-copy": "~1.3",
                 "php": "^5.6 || ^7.0",
-                "phpspec/prophecy": "^1.3.1",
+                "phpspec/prophecy": "^1.6.2",
                 "phpunit/php-code-coverage": "^4.0.3",
                 "phpunit/php-file-iterator": "~1.4",
                 "phpunit/php-text-template": "~1.2",
@@ -3763,20 +3482,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-12-03 08:33:00"
+            "time": "2016-12-09 02:48:53"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "3.4.2",
+            "version": "3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "90a08f5deed5f7ac35463c161f2e8fa0e5652faf"
+                "reference": "3ab72b65b39b491e0c011e2e09bb2206c2aa8e24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/90a08f5deed5f7ac35463c161f2e8fa0e5652faf",
-                "reference": "90a08f5deed5f7ac35463c161f2e8fa0e5652faf",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/3ab72b65b39b491e0c011e2e09bb2206c2aa8e24",
+                "reference": "3ab72b65b39b491e0c011e2e09bb2206c2aa8e24",
                 "shasum": ""
             },
             "require": {
@@ -3822,7 +3541,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2016-11-27 07:52:03"
+            "time": "2016-12-08 20:27:08"
         },
         {
             "name": "psr/log",

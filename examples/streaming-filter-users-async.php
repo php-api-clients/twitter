@@ -30,8 +30,9 @@ if (count($argv) > 1) {
     }
 }
 
-$promises = [];
+$users = array_unique($users);
 
+$promises = [];
 foreach ($users as $user) {
     $promises[] = $client->user($user);
 }
@@ -43,7 +44,7 @@ all($promises)->then(function ($users) use ($client) {
         $userIds[] = $user->idStr();
     }
 
-    $client->filteredStream([
+    $client->stream()->filtered([
         'follow' => implode(',', $userIds),
     ])->subscribeCallback(function ($document) {
         resource_pretty_print($document);

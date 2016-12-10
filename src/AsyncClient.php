@@ -9,23 +9,19 @@ use ApiClients\Foundation\Oauth1\Middleware\Oauth1Middleware;
 use ApiClients\Foundation\Oauth1\Options as Oauth1Options;
 use ApiClients\Foundation\Options;
 use ApiClients\Foundation\Transport\CommandBus\Command\RequestCommand;
-use ApiClients\Foundation\Transport\CommandBus\Command\StreamingRequestCommand;
 use ApiClients\Foundation\Transport\Options as TransportOptions;
+use ApiClients\Tools\CommandBus\CommandBus;
+use ApiClients\Tools\CommandBus\CommandBusInterface;
 use ApiClients\Tools\Psr7\Oauth1\Definition;
 use GuzzleHttp\Psr7\Request;
-use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use React\EventLoop\LoopInterface;
 use React\Promise\PromiseInterface;
-use Rx\Extra\Operator\CutOperator;
 use Rx\Observable;
-use Rx\React\Promise;
 use function React\Promise\resolve;
 
-final class AsyncClient
+final class AsyncClient implements AsyncClientInterface
 {
-    const STREAM_DELIMITER = "\r\n";
-
     /**
      * @var string
      */
@@ -45,6 +41,11 @@ final class AsyncClient
      * @var Client
      */
     protected $client;
+
+    /**
+     * @var AsyncStreamingClient
+     */
+    protected $streamingClient;
 
     public function __construct(
         string $consumerKey,
@@ -107,6 +108,11 @@ final class AsyncClient
         );
     }
 
+    public function getCommandBus(): CommandBusInterface
+    {
+        return $this->client->getFromContainer(CommandBusInterface::class);
+    }
+
     public function user(string $user): PromiseInterface
     {
         return $this->client->handle(new RequestCommand(
@@ -116,45 +122,12 @@ final class AsyncClient
         });
     }
 
-    public function sampleStream(): Observable
+    public function stream(): AsyncStreamingClient
     {
-        return $this->stream(
-            new Request('GET', 'https://stream.twitter.com/1.1/statuses/sample.json')
-        );
-    }
+        if (!($this->streamingClient instanceof AsyncStreamingClient)) {
+            $this->streamingClient = new AsyncStreamingClient($this->client);
+        }
 
-    public function filteredStream(array $filter = []): Observable
-    {
-        $postData = http_build_query($filter);
-        return $this->stream(
-            new Request(
-                'POST',
-                'https://stream.twitter.com/1.1/statuses/filter.json',
-                [
-                    'Content-Type' =>  'application/x-www-form-urlencoded',
-                    'Content-Length' => strlen($postData),
-                ],
-                $postData
-            )
-        );
-    }
-
-    protected function stream(RequestInterface $request): Observable
-    {
-        return Promise::toObservable($this->client->handle(new StreamingRequestCommand(
-            $request
-        )))->switchLatest()->lift(function () {
-            return new CutOperator(self::STREAM_DELIMITER);
-        })->filter(function (string $json) {
-            return trim($json) !== ''; // To keep the stream alive Twitter sends an empty line at times
-        })->jsonDecode()->flatMap(function (array $document) {
-            if (isset($document['delete'])) {
-                return Promise::toObservable($this->client->handle(
-                    new HydrateCommand('DeletedTweet', $document['delete'])
-                ));
-            }
-
-            return Promise::toObservable($this->client->handle(new HydrateCommand('Tweet', $document)));
-        });
+        return $this->streamingClient;
     }
 }

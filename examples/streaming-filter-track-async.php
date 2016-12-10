@@ -17,7 +17,7 @@ $client = (new AsyncClient(
 ))->withAccessToken(
     $config['access_token']['token'],
     $config['access_token']['secret']
-);
+)->stream();
 
 $users = [
     'WyriHaximus',
@@ -30,7 +30,9 @@ if (count($argv) > 1) {
     }
 }
 
-$client->filteredStream([
+$tracks = array_unique($tracks);
+
+$client->filtered([
     'track' => implode(',', $tracks),
 ])->subscribeCallback(function ($document) {
     resource_pretty_print($document);
