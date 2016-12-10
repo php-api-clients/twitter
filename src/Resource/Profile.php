@@ -46,6 +46,11 @@ abstract class Profile extends AbstractResource implements ProfileInterface
     protected $description;
 
     /**
+     * @var array
+     */
+    protected $changedFields = [];
+
+    /**
      * @return int
      */
     public function id() : int
@@ -109,6 +114,12 @@ abstract class Profile extends AbstractResource implements ProfileInterface
     {
         $clone = clone $this;
         $clone->name = $name;
+        $clone->changedFields['name'] = 'name';
         return $clone;
+    }
+
+    public function putProfile()
+    {
+
     }
 }

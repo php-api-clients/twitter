@@ -22,7 +22,8 @@ $client = (new AsyncClient(
 ))->withAccessToken(
     $config['access_token']['token'],
     $config['access_token']['secret']
-)->profile()->done(function (ProfileInterface $profile) use ($argv) {
+)->profile()->then(function (ProfileInterface $profile) use ($argv) {
+    echo 'Fetched profile', PHP_EOL;
     resource_pretty_print($profile);
     $emojis = [
         '😈 ',
@@ -72,10 +73,17 @@ $client = (new AsyncClient(
         '🎵',
         '🎶',
     ];
+    echo 'Setting new name', PHP_EOL;
     $profile = $profile->withName(sprintf(
         $argv[1],
         $emojis[random_int(0, count($emojis) - 1)]
     ));
+    resource_pretty_print($profile);
+
+    echo 'Updating profile', PHP_EOL;
+    return $profile->putProfile();
+})->done(function (ProfileInterface $profile) {
+    echo 'Profile updated', PHP_EOL;
     resource_pretty_print($profile);
 });
 

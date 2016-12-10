@@ -71,4 +71,9 @@ abstract class EmptyProfile implements ProfileInterface, EmptyResourceInterface
     {
         return clone $this;
     }
+
+    public function putProfile()
+    {
+
+    }
 }
