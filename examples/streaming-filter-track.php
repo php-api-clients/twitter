@@ -2,6 +2,7 @@
 
 use ApiClients\Client\Twitter\Client;
 use function ApiClients\Foundation\resource_pretty_print;
+use function React\Promise\all;
 
 require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 $config = require 'resolve_config.php';
@@ -12,7 +13,7 @@ $client = (new Client(
 ))->withAccessToken(
     $config['access_token']['token'],
     $config['access_token']['secret']
-);
+)->stream();
 
 $users = [
     'WyriHaximus',
@@ -20,13 +21,18 @@ $users = [
 
 if (count($argv) > 1) {
     unset($argv[0]);
-    foreach ($argv as $user) {
-        $users[] = $user;
+    foreach ($argv as $track) {
+        $tracks[] = $track;
     }
 }
 
-$users = array_unique($users);
+$tracks = array_unique($tracks);
 
-foreach ($users as $user) {
-    resource_pretty_print($client->user($user));
-}
+$client->filtered(
+    function ($document) {
+        resource_pretty_print($document);
+    },
+    [
+        'track' => implode(',', $tracks),
+    ]
+);

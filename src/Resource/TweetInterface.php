@@ -7,6 +7,8 @@ use DateTime;
 
 interface TweetInterface extends ResourceInterface
 {
+    const HYDRATE_CLASS = 'Tweet';
+
     /**
      * @return bool
      */
@@ -45,7 +47,7 @@ interface TweetInterface extends ResourceInterface
     /**
      * @return int
      */
-    //public function retweetCount() : int;
+    public function retweetCount() : int;
 
     /**
      * @return string
