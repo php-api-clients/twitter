@@ -74,6 +74,5 @@ abstract class EmptyProfile implements ProfileInterface, EmptyResourceInterface
 
     public function putProfile()
     {
-
     }
 }

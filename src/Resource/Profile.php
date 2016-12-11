@@ -120,6 +120,5 @@ abstract class Profile extends AbstractResource implements ProfileInterface
 
     public function putProfile()
     {
-
     }
 }

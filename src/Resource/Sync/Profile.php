@@ -13,7 +13,9 @@ class Profile extends BaseProfile
     public function putProfile(): Profile
     {
         return $this->wait(
-            $this->handleCommand(new BuildAsyncFromSyncCommand(self::HYDRATE_CLASS, $this))->then(function (AsyncProfile $profile) {
+            $this->handleCommand(
+                new BuildAsyncFromSyncCommand(self::HYDRATE_CLASS, $this)
+            )->then(function (AsyncProfile $profile) {
                 return $profile->putProfile();
             })->then(function (Profile $profile) {
                 return $this->handleCommand(new BuildSyncFromAsyncCommand(self::HYDRATE_CLASS, $profile));
@@ -23,8 +25,12 @@ class Profile extends BaseProfile
 
     public function refresh() : Profile
     {
-        return $this->wait($this->handleCommand(new BuildAsyncFromSyncCommand(self::HYDRATE_CLASS, $this))->then(function (ProfileInterface $profile) {
-            return $profile->refresh();
-        }));
+        return $this->wait(
+            $this->handleCommand(
+                new BuildAsyncFromSyncCommand(self::HYDRATE_CLASS, $this)
+            )->then(function (ProfileInterface $profile) {
+                return $profile->refresh();
+            })
+        );
     }
 }
