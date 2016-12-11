@@ -42,10 +42,23 @@ final class AsyncClient implements AsyncClientInterface
     protected $client;
 
     /**
+     * @var array
+     */
+    protected $options;
+
+    /**
      * @var AsyncStreamingClient
      */
     protected $streamingClient;
 
+    /**
+     * AsyncClient constructor.
+     * @param string $consumerKey
+     * @param string $consumerSecret
+     * @param LoopInterface $loop
+     * @param array $options
+     * @param Client|null $client
+     */
     public function __construct(
         string $consumerKey,
         string $consumerSecret,
