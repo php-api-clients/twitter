@@ -42,10 +42,23 @@ final class AsyncClient implements AsyncClientInterface
     protected $client;
 
     /**
+     * @var array
+     */
+    protected $options;
+
+    /**
      * @var AsyncStreamingClient
      */
     protected $streamingClient;
 
+    /**
+     * AsyncClient constructor.
+     * @param string $consumerKey
+     * @param string $consumerSecret
+     * @param LoopInterface $loop
+     * @param array $options
+     * @param Client|null $client
+     */
     public function __construct(
         string $consumerKey,
         string $consumerSecret,
@@ -110,6 +123,15 @@ final class AsyncClient implements AsyncClientInterface
     public function getCommandBus(): CommandBusInterface
     {
         return $this->client->getFromContainer(CommandBusInterface::class);
+    }
+
+    public function profile(): PromiseInterface
+    {
+        return $this->client->handle(new RequestCommand(
+            new Request('GET', 'account/verify_credentials.json')
+        ))->then(function (ResponseInterface $response) {
+            return resolve($this->client->handle(new HydrateCommand('Profile', $response->getBody()->getJson())));
+        });
     }
 
     public function user(string $user): PromiseInterface
