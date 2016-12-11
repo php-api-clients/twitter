@@ -7,3 +7,4 @@ properties:
   location: string
   profile_location: string
   description: string
+  url: string
