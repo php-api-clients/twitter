@@ -62,12 +62,46 @@ abstract class EmptyProfile implements ProfileInterface, EmptyResourceInterface
         return null;
     }
 
+    /**
+     * @return string
+     */
+    public function url() : string
+    {
+        return null;
+    }
 
     /**
      * @param string $name
      * @return ProfileInterface
      */
     public function withName(string $name): ProfileInterface
+    {
+        return clone $this;
+    }
+
+    /**
+     * @param string $location
+     * @return ProfileInterface
+     */
+    public function withLocation(string $location): ProfileInterface
+    {
+        return clone $this;
+    }
+
+    /**
+     * @param string $description
+     * @return ProfileInterface
+     */
+    public function withDescription(string $description): ProfileInterface
+    {
+        return clone $this;
+    }
+
+    /**
+     * @param string $url
+     * @return ProfileInterface
+     */
+    public function withUrl(string $url): ProfileInterface
     {
         return clone $this;
     }
