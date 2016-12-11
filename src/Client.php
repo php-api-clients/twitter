@@ -114,7 +114,7 @@ final class Client implements ClientInterface
             $this->loop,
             [],
             $this->client
-        ))->withOutAccessToken();
+        ));
         return $clone;
     }
 
