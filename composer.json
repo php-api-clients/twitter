@@ -1,6 +1,7 @@
 {
     "name": "api-clients/twitter",
     "description": "Async first twitter client",
+    "homepage": "https://php-api-clients.org/clients/twitter/",
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
