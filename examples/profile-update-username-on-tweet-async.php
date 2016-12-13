@@ -24,7 +24,9 @@ $client = (new AsyncClient(
 ))->withAccessToken(
     $config['access_token']['token'],
     $config['access_token']['secret']
-)->profile()->done(function (ProfileInterface $profile) use ($client, $argv, $emojis) {
+);
+
+$profile = $client->profile()->done(function (ProfileInterface $profile) use ($client, $argv, $emojis) {
     resource_pretty_print($profile);
     $client->stream()->filtered([
         'follow' => $profile->idStr(),
