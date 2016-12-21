@@ -34,19 +34,30 @@ $profile = $client->profile()->done(function (ProfileInterface $profile) use ($c
         return $resource instanceof Tweet;
     })->filter(function (Tweet $tweet) use ($profile) {
         return $tweet->user()->idStr() === $profile->idStr();
-    })->subscribeCallback(function (Tweet $tweet) use ($profile, $argv, $emojis) {
-        echo '------------------', PHP_EOL;
-        echo $tweet->text(), PHP_EOL;
-        echo '------------------', PHP_EOL;
-        $profile = $profile->withName(sprintf(
-            $argv[1],
-            $emojis[random_int(0, count($emojis) - 1)]
-        ));
-        $profile->putProfile()->done(function (ProfileInterface $newProfile) use ($profile) {
-            $profile = $newProfile;
-            resource_pretty_print($profile);
-        });
-    });
+    })->subscribeCallback(
+        function (Tweet $tweet) use ($profile, $argv, $emojis) {
+            echo '------------------', PHP_EOL;
+            echo $tweet->text(), PHP_EOL;
+            echo '------------------', PHP_EOL;
+            $profile = $profile->withName(sprintf(
+                $argv[1],
+                $emojis[random_int(0, count($emojis) - 1)]
+            ));
+            $profile->putProfile()->done(function (ProfileInterface $newProfile) use ($profile) {
+                $profile = $newProfile;
+                resource_pretty_print($profile);
+            });
+        },
+        function ($e) {
+            echo (string)$e;
+        },
+        function () {
+            echo PHP_EOL;
+            echo '------------------', PHP_EOL;
+            echo 'Completed streaming', PHP_EOL;
+            echo '------------------', PHP_EOL;
+        }
+    );
 });
 
 $loop->run();
