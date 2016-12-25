@@ -64,7 +64,7 @@ final class AsyncStreamingClient implements AsyncStreamingClientInterface
             return new CutOperator(self::STREAM_DELIMITER);
         })->filter(function (string $json) {
             return trim($json) !== ''; // To keep the stream alive Twitter sends an empty line at times
-        })->jsonDecode()->flatMap(function (array $document) {
+        })->_ApiClients_jsonDecode()->flatMap(function (array $document) {
             if (isset($document['delete'])) {
                 return Promise::toObservable($this->client->handle(
                     new HydrateCommand('DeletedTweet', $document['delete'])

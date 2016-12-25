@@ -15,10 +15,10 @@
         "php": "^7.0",
         "api-clients/foundation": "dev-master",
         "api-clients/middleware-oauth1": "^1.0",
+        "api-clients/rx": "dev-master",
         "api-clients/rx-operators": "dev-master",
         "api-clients/transport": "dev-master",
-        "react/http-client": "^0.4.14",
-        "reactivex/rxphp": "dev-custom_operators as 1.4.0"
+        "react/http-client": "^0.4.14"
     },
     "require-dev": {
         "api-clients/resource-generator": "dev-master",
@@ -35,12 +35,6 @@
             "ApiClients\\Tests\\Client\\Twitter\\": "tests/"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/mbonneau/RxPHP"
-        }
-    ],
     "config": {
         "sort-packages": true
     }
