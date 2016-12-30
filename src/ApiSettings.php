@@ -3,12 +3,12 @@
 namespace ApiClients\Client\Twitter;
 
 use ApiClients\Foundation\Hydrator\Options as HydratorOptions;
-use ApiClients\Foundation\Oauth1\Middleware\Oauth1Middleware;
-use ApiClients\Foundation\Oauth1\Options as Oauth1Options;
 use ApiClients\Foundation\Options;
 use ApiClients\Foundation\Transport\Middleware\JsonDecodeMiddleware;
 use ApiClients\Foundation\Transport\Options as TransportOptions;
 use ApiClients\Foundation\Transport\UserAgentStrategies;
+use ApiClients\Middleware\Oauth1\Oauth1Middleware;
+use ApiClients\Middleware\Oauth1\Options as Oauth1Options;
 use ApiClients\Tools\Psr7\Oauth1\Definition;
 
 final class ApiSettings

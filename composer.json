@@ -14,7 +14,7 @@
     "require": {
         "php": "^7.0",
         "api-clients/foundation": "dev-master",
-        "api-clients/middleware-oauth1": "^1.0",
+        "api-clients/middleware-oauth1": "^2.0",
         "api-clients/rx": "dev-master",
         "api-clients/rx-operators": "dev-master",
         "api-clients/transport": "dev-master",

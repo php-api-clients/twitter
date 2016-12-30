@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "50cbec9e248c3a7e74d498ba14662382",
-    "content-hash": "396f2299d0440e4c3312638f521a778c",
+    "hash": "69ed700379686b0050d0de251a571a64",
+    "content-hash": "b643dea184d01fba0dc60fb143491569",
     "packages": [
         {
             "name": "api-clients/command-bus",
@@ -61,12 +61,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/foundation.git",
-                "reference": "1da4978b2cc4062b6931b34796987773cca0dc2b"
+                "reference": "e694a5d622d3c830dfa01354d6b3c98f4ff5a198"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/foundation/zipball/1da4978b2cc4062b6931b34796987773cca0dc2b",
-                "reference": "1da4978b2cc4062b6931b34796987773cca0dc2b",
+                "url": "https://api.github.com/repos/php-api-clients/foundation/zipball/e694a5d622d3c830dfa01354d6b3c98f4ff5a198",
+                "reference": "e694a5d622d3c830dfa01354d6b3c98f4ff5a198",
                 "shasum": ""
             },
             "require": {
@@ -90,7 +90,10 @@
             "autoload": {
                 "psr-4": {
                     "ApiClients\\Foundation\\": "src/"
-                }
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -102,7 +105,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2016-12-17 22:15:01"
+            "time": "2016-12-28 07:20:59"
         },
         {
             "name": "api-clients/hydrator",
@@ -218,16 +221,16 @@
         },
         {
             "name": "api-clients/middleware-oauth1",
-            "version": "1.0.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/middleware-oauth1.git",
-                "reference": "e7c61313bcb203c2a8d448d95365af2f377b8111"
+                "reference": "bcbd1df3e0c50e376532005e4204760e66e2d134"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/middleware-oauth1/zipball/e7c61313bcb203c2a8d448d95365af2f377b8111",
-                "reference": "e7c61313bcb203c2a8d448d95365af2f377b8111",
+                "url": "https://api.github.com/repos/php-api-clients/middleware-oauth1/zipball/bcbd1df3e0c50e376532005e4204760e66e2d134",
+                "reference": "bcbd1df3e0c50e376532005e4204760e66e2d134",
                 "shasum": ""
             },
             "require": {
@@ -238,12 +241,12 @@
                 "wyrihaximus/ticking-promise": "^1.6"
             },
             "require-dev": {
-                "api-clients/test-utilities": "^1.0"
+                "api-clients/test-utilities": "^2.0"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "ApiClients\\Foundation\\Oauth1\\": "src/"
+                    "ApiClients\\Middleware\\Oauth1\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -257,7 +260,7 @@
                 }
             ],
             "description": "Oauth1 middleware",
-            "time": "2016-12-05 10:18:59"
+            "time": "2016-12-30 07:03:09"
         },
         {
             "name": "api-clients/psr7-oauth1",
@@ -355,18 +358,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/rx.git",
-                "reference": "d9bf066f439dcb7673c567381b9a7d13ac7ec14f"
+                "reference": "16f4fed2978d0402a7cbb93f0bb4d644d10495cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/rx/zipball/d9bf066f439dcb7673c567381b9a7d13ac7ec14f",
-                "reference": "d9bf066f439dcb7673c567381b9a7d13ac7ec14f",
+                "url": "https://api.github.com/repos/php-api-clients/rx/zipball/16f4fed2978d0402a7cbb93f0bb4d644d10495cd",
+                "reference": "16f4fed2978d0402a7cbb93f0bb4d644d10495cd",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.0",
                 "react/promise": "^2.4",
-                "reactivex/rxphp": "dev-master#c7d351d579f90134eef3701d87eb1ea8cd1e072e"
+                "reactivex/rxphp": "^1.5"
             },
             "require-dev": {
                 "api-clients/test-utilities": "^2.0"
@@ -390,7 +393,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2016-12-25 11:23:34"
+            "time": "2016-12-28 14:54:35"
         },
         {
             "name": "api-clients/rx-operators",
@@ -398,12 +401,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/rx-operators.git",
-                "reference": "09ff5eff8daff97abce3e63c31f0025a4d374108"
+                "reference": "f42a181957c5e7e4b1f6b5d1fd42d64da555ec55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/rx-operators/zipball/09ff5eff8daff97abce3e63c31f0025a4d374108",
-                "reference": "09ff5eff8daff97abce3e63c31f0025a4d374108",
+                "url": "https://api.github.com/repos/php-api-clients/rx-operators/zipball/f42a181957c5e7e4b1f6b5d1fd42d64da555ec55",
+                "reference": "f42a181957c5e7e4b1f6b5d1fd42d64da555ec55",
                 "shasum": ""
             },
             "require": {
@@ -430,7 +433,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2016-12-25 12:21:24"
+            "time": "2016-12-25 17:58:30"
         },
         {
             "name": "api-clients/service",
@@ -1845,16 +1848,16 @@
         },
         {
             "name": "react/promise-timer",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise-timer.git",
-                "reference": "6a46050d801688e08d1a550b97b1f3735505c62a"
+                "reference": "ddedc67bfd7f579fc83e66ff67e3564b179297dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise-timer/zipball/6a46050d801688e08d1a550b97b1f3735505c62a",
-                "reference": "6a46050d801688e08d1a550b97b1f3735505c62a",
+                "url": "https://api.github.com/repos/reactphp/promise-timer/zipball/ddedc67bfd7f579fc83e66ff67e3564b179297dd",
+                "reference": "ddedc67bfd7f579fc83e66ff67e3564b179297dd",
                 "shasum": ""
             },
             "require": {
@@ -1891,7 +1894,7 @@
                 "timeout",
                 "timer"
             ],
-            "time": "2016-02-29 19:03:45"
+            "time": "2016-12-27 08:12:19"
         },
         {
             "name": "react/socket",
@@ -2016,16 +2019,16 @@
         },
         {
             "name": "reactivex/rxphp",
-            "version": "dev-master",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ReactiveX/RxPHP.git",
-                "reference": "c7d351d579f90134eef3701d87eb1ea8cd1e072e"
+                "reference": "0e88894ea060822e448eb49295ed8cf7d344167e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ReactiveX/RxPHP/zipball/c7d351d579f90134eef3701d87eb1ea8cd1e072e",
-                "reference": "c7d351d579f90134eef3701d87eb1ea8cd1e072e",
+                "url": "https://api.github.com/repos/ReactiveX/RxPHP/zipball/0e88894ea060822e448eb49295ed8cf7d344167e",
+                "reference": "0e88894ea060822e448eb49295ed8cf7d344167e",
                 "shasum": ""
             },
             "require": {
@@ -2078,7 +2081,7 @@
                 "reactive",
                 "rx"
             ],
-            "time": "2016-12-24 23:43:32"
+            "time": "2016-12-28 22:50:58"
         },
         {
             "name": "ringcentral/psr7",
@@ -3395,16 +3398,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.4",
+            "version": "5.7.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "af91da3f2671006ff5d0628023de3b7ac4d1ef09"
+                "reference": "50fd2be8f3e23e91da825f36f08e5f9633076ffe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/af91da3f2671006ff5d0628023de3b7ac4d1ef09",
-                "reference": "af91da3f2671006ff5d0628023de3b7ac4d1ef09",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/50fd2be8f3e23e91da825f36f08e5f9633076ffe",
+                "reference": "50fd2be8f3e23e91da825f36f08e5f9633076ffe",
                 "shasum": ""
             },
             "require": {
@@ -3473,7 +3476,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-12-13 16:19:44"
+            "time": "2016-12-28 07:18:51"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
