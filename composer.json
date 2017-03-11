@@ -14,7 +14,8 @@
     "require": {
         "php": "^7.0",
         "api-clients/foundation": "dev-master",
-        "api-clients/middleware-oauth1": "^2.0",
+        "api-clients/middleware-oauth1": "^3.0",
+        "api-clients/middleware-user-agent": "^1.0",
         "api-clients/rx": "dev-master",
         "api-clients/rx-operators": "dev-master",
         "api-clients/transport": "dev-master",
@@ -23,7 +24,7 @@
     "require-dev": {
         "api-clients/resource-generator": "dev-master",
         "api-clients/resource-test-utilities": "dev-master",
-        "api-clients/test-utilities": "^2.0"
+        "api-clients/test-utilities": "^3.0.1"
     },
     "autoload": {
         "psr-4": {
