@@ -16,10 +16,10 @@
         "api-clients/foundation": "dev-master",
         "api-clients/middleware-oauth1": "^3.0",
         "api-clients/middleware-user-agent": "^1.0",
-        "api-clients/rx": "dev-master",
-        "api-clients/rx-operators": "dev-master",
+        "api-clients/rx": "^2.0",
+        "api-clients/rx-operators": "^2.0",
         "api-clients/transport": "dev-master",
-        "react/http-client": "^0.4.14"
+        "react/http-client": "^0.4.17"
     },
     "require-dev": {
         "api-clients/resource-generator": "dev-master",

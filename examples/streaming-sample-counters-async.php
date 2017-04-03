@@ -43,7 +43,7 @@ $loop->addPeriodicTimer(1, function () use (&$counters) {
     }
 });
 
-$client->sample()->subscribeCallback(function ($document) use(&$counters) {
+$client->sample()->subscribe(function ($document) use(&$counters) {
     $class = get_class($document);
 
     if (!isset($counters[$class])) {

@@ -17,8 +17,10 @@ $client = (new AsyncClient(
     $config['access_token']['secret']
 )->stream();
 
-$client->sample()->subscribeCallback(function ($document) {
+$client->sample()->subscribe(function ($document) {
     resource_pretty_print($document);
+}, function ($e) {
+    echo (string)$e;
 });
 
 $loop->run();

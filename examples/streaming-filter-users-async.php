@@ -45,7 +45,7 @@ all($promises)->then(function ($users) use ($client) {
 
     $client->stream()->filtered([
         'follow' => implode(',', $userIds),
-    ])->subscribeCallback(function ($document) {
+    ])->subscribe(function ($document) {
         resource_pretty_print($document);
     });
 });

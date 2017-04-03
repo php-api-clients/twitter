@@ -31,7 +31,7 @@ $hashtags = array_unique($hashtags);
 
 $client->filtered([
     'track' => implode(',', $hashtags),
-])->subscribeCallback(function ($document) {
+])->subscribe(function ($document) {
     resource_pretty_print($document);
 });
 

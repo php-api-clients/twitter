@@ -5,14 +5,12 @@ namespace ApiClients\Client\Twitter;
 use ApiClients\Foundation\Client;
 use ApiClients\Foundation\Hydrator\CommandBus\Command\HydrateCommand;
 use ApiClients\Foundation\Transport\CommandBus\Command\StreamingRequestCommand;
-use ApiClients\Tools\Psr7\Oauth1\Definition;
 use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\RequestInterface;
 use React\EventLoop\LoopInterface;
-use Rx\Extra\Operator\CutOperator;
 use Rx\Observable;
+use Rx\Operator\CutOperator;
 use Rx\React\Promise;
-use function React\Promise\resolve;
 
 final class AsyncStreamingClient implements AsyncStreamingClientInterface
 {

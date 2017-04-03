@@ -33,7 +33,7 @@ $tracks = array_unique($tracks);
 
 $client->filtered([
     'track' => implode(',', $tracks),
-])->subscribeCallback(function ($document) {
+])->subscribe(function ($document) {
     resource_pretty_print($document);
 });
 
