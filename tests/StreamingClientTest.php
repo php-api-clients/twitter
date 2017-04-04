@@ -10,6 +10,7 @@ use ApiClients\Tools\CommandBus\CommandBusInterface;
 use ApiClients\Tools\TestUtilities\TestCase;
 use Prophecy\Argument;
 use React\EventLoop\Factory;
+use function React\Promise\reject;
 use Rx\Observable;
 
 final class StreamingClientTest extends TestCase
@@ -72,20 +73,18 @@ final class StreamingClientTest extends TestCase
      */
     public function testStreamingClient(string $method, array $args)
     {
-        $resource = $this->prophesize(ResourceInterface::class);
+        $resource = new class() implements ResourceInterface {
+            const HYDRATE_CLASS = 'HYDRATE_CLASS';
+        };
         $listener = function () {};
         $loop = Factory::create();
         $commandBus = $this->prophesize(CommandBusInterface::class);
-        $commandBus->handle(Argument::type(BuildSyncFromAsyncCommand::class))->shouldBeCalled()->willReturn(\React\Promise\reject());
-        /*$container = ContainerBuilder::buildDevContainer();
-        $container->set(LoopInterface::class, Factory::create());
-        $container->set(CommandBusInterface::class, $commandBus->reveal());
-        $client = new Client($container);*/
+        $commandBus->handle(Argument::type(BuildSyncFromAsyncCommand::class))->shouldBeCalled()->willReturn(reject());
         $observableSecond = $this->prophesize(Observable::class);
-        $observableSecond->subscribeCallback($listener, Argument::type('callable'))->shouldBeCalled();
+        $observableSecond->subscribe($listener, Argument::type('callable'))->shouldBeCalled();
         $observableFirst = $this->prophesize(Observable::class);
         $observableFirst->flatMap(Argument::that(function (callable $callable) use ($resource) {
-            $callable($resource->reveal());
+            $callable($resource);
             return true;
         }))->shouldBeCalled()->willReturn($observableSecond->reveal());
         $asyncStreamingClient = $this->prophesize(AsyncStreamingClientInterface::class);
