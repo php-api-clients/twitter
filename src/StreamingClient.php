@@ -69,7 +69,7 @@ final class StreamingClient implements StreamingClientInterface
                     )
                 )
             );
-        })->subscribeCallback(
+        })->subscribe(
             $listener,
             function ($error) {
                 throw $error;
