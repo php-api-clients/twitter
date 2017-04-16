@@ -4,8 +4,8 @@ namespace ApiClients\Client\Twitter;
 
 use ApiClients\Foundation\Hydrator\Options as HydratorOptions;
 use ApiClients\Foundation\Options;
-use ApiClients\Foundation\Transport\Middleware\JsonDecodeMiddleware;
 use ApiClients\Foundation\Transport\Options as TransportOptions;
+use ApiClients\Middleware\Json\JsonDecodeMiddleware;
 use ApiClients\Middleware\Oauth1\Oauth1Middleware;
 use ApiClients\Middleware\Oauth1\Options as Oauth1Options;
 use ApiClients\Middleware\UserAgent\Options as UserAgentMiddlewareOptions;

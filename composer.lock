@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "353b227f076f68bb0cd80ed7c1a32a51",
+    "content-hash": "8ce233f97d28097f77e490555134586b",
     "packages": [
         {
             "name": "api-clients/command-bus",
@@ -173,6 +173,46 @@
             "time": "2016-12-09 16:58:28"
         },
         {
+            "name": "api-clients/json",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-api-clients/json.git",
+                "reference": "8118d00a248840f1e6677a62e8e1834561d88e0c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-api-clients/json/zipball/8118d00a248840f1e6677a62e8e1834561d88e0c",
+                "reference": "8118d00a248840f1e6677a62e8e1834561d88e0c",
+                "shasum": ""
+            },
+            "require": {
+                "daverandom/exceptional-json": "^1.0.1",
+                "php": "^7.0",
+                "wyrihaximus/ticking-promise": "^1.6"
+            },
+            "require-dev": {
+                "api-clients/test-utilities": "^3.0.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ApiClients\\Tools\\Json\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com"
+                }
+            ],
+            "time": "2017-04-13 05:35:09"
+        },
+        {
             "name": "api-clients/middleware",
             "version": "2.0.0",
             "source": {
@@ -221,6 +261,50 @@
             ],
             "description": "Request middleware",
             "time": "2017-03-04T11:38:16+00:00"
+        },
+        {
+            "name": "api-clients/middleware-json",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-api-clients/middleware-json.git",
+                "reference": "2a3211d9910da9bfc956427afd41795e96a8cece"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-api-clients/middleware-json/zipball/2a3211d9910da9bfc956427afd41795e96a8cece",
+                "reference": "2a3211d9910da9bfc956427afd41795e96a8cece",
+                "shasum": ""
+            },
+            "require": {
+                "api-clients/json": "dev-master",
+                "api-clients/middleware": "^2.0",
+                "clue/buzz-react": "^1.1",
+                "php": "^7.0",
+                "psr/http-message": "^1.0",
+                "ringcentral/psr7": "^1.2",
+                "wyrihaximus/ticking-promise": "^1.6"
+            },
+            "require-dev": {
+                "api-clients/test-utilities": "^3.0.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ApiClients\\Middleware\\Json\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com"
+                }
+            ],
+            "time": "2017-04-13 05:37:23"
         },
         {
             "name": "api-clients/middleware-oauth1",
@@ -4850,6 +4934,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "api-clients/foundation": 20,
+        "api-clients/middleware-json": 20,
         "api-clients/transport": 20,
         "api-clients/resource-generator": 20,
         "api-clients/resource-test-utilities": 20

@@ -14,6 +14,7 @@
     "require": {
         "php": "^7.0",
         "api-clients/foundation": "dev-master",
+        "api-clients/middleware-json": "dev-master",
         "api-clients/middleware-oauth1": "^3.0",
         "api-clients/middleware-user-agent": "^1.0",
         "api-clients/rx": "^2.0",
