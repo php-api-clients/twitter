@@ -19,7 +19,6 @@
         "api-clients/middleware-user-agent": "^1.0",
         "api-clients/rx": "^2.0",
         "api-clients/rx-operators": "^2.0",
-        "api-clients/transport": "dev-master",
         "react/http-client": "^0.4.17"
     },
     "require-dev": {
