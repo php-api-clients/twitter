@@ -60,17 +60,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/foundation.git",
-                "reference": "5f6bfc5fb1f8a80ea3db58c28d66cb7b08fa8080"
+                "reference": "3e869a99269ca58d3945c7099a42b7cced2c5f9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/foundation/zipball/5f6bfc5fb1f8a80ea3db58c28d66cb7b08fa8080",
-                "reference": "5f6bfc5fb1f8a80ea3db58c28d66cb7b08fa8080",
+                "url": "https://api.github.com/repos/php-api-clients/foundation/zipball/3e869a99269ca58d3945c7099a42b7cced2c5f9b",
+                "reference": "3e869a99269ca58d3945c7099a42b7cced2c5f9b",
                 "shasum": ""
             },
             "require": {
                 "api-clients/command-bus": "^2.0",
-                "api-clients/hydrator": "dev-master",
+                "api-clients/hydrator": "^1.0.1",
                 "api-clients/middleware": "^2.0||^1.1",
                 "api-clients/transport": "^1.0",
                 "league/event": "^2.1",
@@ -105,36 +105,34 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2017-04-24 20:17:14"
+            "time": "2017-04-27 20:15:05"
         },
         {
             "name": "api-clients/hydrator",
-            "version": "dev-master",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/hydrator.git",
-                "reference": "c322d87e2178638e408efdfeb6b25ab399f9162c"
+                "reference": "ba17f22d17f241c93cc4342f07696b9dc4cdc86c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/hydrator/zipball/c322d87e2178638e408efdfeb6b25ab399f9162c",
-                "reference": "c322d87e2178638e408efdfeb6b25ab399f9162c",
+                "url": "https://api.github.com/repos/php-api-clients/hydrator/zipball/ba17f22d17f241c93cc4342f07696b9dc4cdc86c",
+                "reference": "ba17f22d17f241c93cc4342f07696b9dc4cdc86c",
                 "shasum": ""
             },
             "require": {
                 "api-clients/command-bus": "^2.0",
-                "api-clients/resource": "^3.0",
+                "api-clients/resource": "^3.0.1",
                 "doctrine/annotations": "^1.2",
                 "doctrine/cache": "^1.6",
                 "ocramius/generated-hydrator": "^2.0",
                 "php": "^7.0",
-                "psr/container": "^1.0",
                 "react/promise": "^2.4",
                 "wyrihaximus/ticking-promise": "^1.6"
             },
             "require-dev": {
                 "api-clients/test-utilities": "^3.0.1",
-                "php-di/php-di": "^5.4.1",
                 "phpbench/phpbench": "^0.11"
             },
             "type": "library",
@@ -165,7 +163,7 @@
                 }
             ],
             "description": "Hydrator wrapping ocramius/generated-hydrator specifically for api clients",
-            "time": "2017-04-21 22:00:26"
+            "time": "2017-04-27T20:10:38+00:00"
         },
         {
             "name": "api-clients/json",
@@ -436,16 +434,16 @@
         },
         {
             "name": "api-clients/resource",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/resource.git",
-                "reference": "ac000b6d1fa66b50eb8acde3d8ba333e7fde3233"
+                "reference": "2a3887a5da9cad8222edd726e466bf8895512f3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/resource/zipball/ac000b6d1fa66b50eb8acde3d8ba333e7fde3233",
-                "reference": "ac000b6d1fa66b50eb8acde3d8ba333e7fde3233",
+                "url": "https://api.github.com/repos/php-api-clients/resource/zipball/2a3887a5da9cad8222edd726e466bf8895512f3f",
+                "reference": "2a3887a5da9cad8222edd726e466bf8895512f3f",
                 "shasum": ""
             },
             "require": {
@@ -476,7 +474,7 @@
                 }
             ],
             "description": "Abstract resource",
-            "time": "2016-12-09T16:48:22+00:00"
+            "time": "2017-04-26T21:16:20+00:00"
         },
         {
             "name": "api-clients/rx",
@@ -1866,20 +1864,23 @@
         },
         {
             "name": "react/event-loop",
-            "version": "v0.4.2",
+            "version": "v0.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/event-loop.git",
-                "reference": "164799f73175e1c80bba92a220ea35df6ca371dd"
+                "reference": "8bde03488ee897dc6bb3d91e4e17c353f9c5252f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/164799f73175e1c80bba92a220ea35df6ca371dd",
-                "reference": "164799f73175e1c80bba92a220ea35df6ca371dd",
+                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/8bde03488ee897dc6bb3d91e4e17c353f9c5252f",
+                "reference": "8bde03488ee897dc6bb3d91e4e17c353f9c5252f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
             },
             "suggest": {
                 "ext-event": "~1.0",
@@ -1887,11 +1888,6 @@
                 "ext-libevent": ">=0.1.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.5-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "React\\EventLoop\\": "src"
@@ -1906,7 +1902,7 @@
                 "asynchronous",
                 "event-loop"
             ],
-            "time": "2016-03-08T02:09:32+00:00"
+            "time": "2017-04-27T10:56:23+00:00"
         },
         {
             "name": "react/http-client",
@@ -2557,17 +2553,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/resource-generator.git",
-                "reference": "017ab2f9a1caac4a502a97e71131a869da16fa06"
+                "reference": "b7261282f241f4beec37b5e719a1cce8c5dea918"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/resource-generator/zipball/017ab2f9a1caac4a502a97e71131a869da16fa06",
-                "reference": "017ab2f9a1caac4a502a97e71131a869da16fa06",
+                "url": "https://api.github.com/repos/php-api-clients/resource-generator/zipball/b7261282f241f4beec37b5e719a1cce8c5dea918",
+                "reference": "b7261282f241f4beec37b5e719a1cce8c5dea918",
                 "shasum": ""
             },
             "require": {
                 "api-clients/foundation": "dev-master",
-                "api-clients/hydrator": "dev-master",
+                "api-clients/hydrator": "^1.0",
                 "api-clients/resource": "^3.0",
                 "api-clients/resource-test-utilities": "dev-master",
                 "doctrine/inflector": "^1.1",
@@ -2577,7 +2573,7 @@
                 "symfony/yaml": "^2.8||^3.0"
             },
             "require-dev": {
-                "api-clients/test-utilities": "^2.0"
+                "api-clients/test-utilities": "^3.0.1"
             },
             "bin": [
                 "api-client-resource-generator"
@@ -2602,7 +2598,7 @@
                 }
             ],
             "description": "Resource from YAML generation tool",
-            "time": "2017-04-10T17:37:24+00:00"
+            "time": "2017-04-27T20:38:27+00:00"
         },
         {
             "name": "api-clients/resource-test-utilities",
@@ -2610,17 +2606,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/resource-test-utilities.git",
-                "reference": "d2247103252ee9347720a6cc0683367785bf6147"
+                "reference": "1aaf9ec035daf4c748d629b3728e396355b1e07f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/resource-test-utilities/zipball/d2247103252ee9347720a6cc0683367785bf6147",
-                "reference": "d2247103252ee9347720a6cc0683367785bf6147",
+                "url": "https://api.github.com/repos/php-api-clients/resource-test-utilities/zipball/1aaf9ec035daf4c748d629b3728e396355b1e07f",
+                "reference": "1aaf9ec035daf4c748d629b3728e396355b1e07f",
                 "shasum": ""
             },
             "require": {
                 "api-clients/foundation": "dev-master",
-                "api-clients/hydrator": "dev-master",
+                "api-clients/hydrator": "^1.0.1",
                 "api-clients/resource": "^3.0",
                 "doctrine/annotations": "^1.2",
                 "doctrine/inflector": "^1.1",
@@ -2649,7 +2645,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2017-02-14T16:42:57+00:00"
+            "time": "2017-04-27T20:45:27+00:00"
         },
         {
             "name": "api-clients/test-utilities",
@@ -4032,23 +4028,23 @@
         },
         {
             "name": "sebastian/global-state",
-            "version": "1.1.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "bc37d50fea7d017d3d340f230811c9f1d7280af4"
+                "reference": "e8ba02eed7bbbb9e59e43dedd3dddeff4a56b0c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/bc37d50fea7d017d3d340f230811c9f1d7280af4",
-                "reference": "bc37d50fea7d017d3d340f230811c9f1d7280af4",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/e8ba02eed7bbbb9e59e43dedd3dddeff4a56b0c4",
+                "reference": "e8ba02eed7bbbb9e59e43dedd3dddeff4a56b0c4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.2"
+                "phpunit/phpunit": "^6.0"
             },
             "suggest": {
                 "ext-uopz": "*"
@@ -4056,7 +4052,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -4079,7 +4075,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2015-10-12T03:26:01+00:00"
+            "time": "2017-04-27T15:39:26+00:00"
         },
         {
             "name": "sebastian/object-enumerator",
