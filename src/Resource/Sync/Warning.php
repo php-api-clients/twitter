@@ -8,7 +8,7 @@ use ApiClients\Foundation\Hydrator\CommandBus\Command\BuildAsyncFromSyncCommand;
 
 class Warning extends BaseWarning
 {
-    public function refresh() : Warning
+    public function refresh(): Warning
     {
         return $this->wait(
             $this->handleCommand(

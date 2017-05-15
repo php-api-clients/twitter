@@ -9,7 +9,7 @@ abstract class EmptyDeletedTweet implements DeletedTweetInterface, EmptyResource
     /**
      * @return array
      */
-    public function status() : array
+    public function status(): array
     {
         return null;
     }
@@ -17,7 +17,7 @@ abstract class EmptyDeletedTweet implements DeletedTweetInterface, EmptyResource
     /**
      * @return string
      */
-    public function timestampMs() : string
+    public function timestampMs(): string
     {
         return null;
     }

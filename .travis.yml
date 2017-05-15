@@ -1,53 +1,46 @@
 language: php
-sudo: false
 
 ## Cache composer bits
 cache:
   directories:
-    - $HOME/.composer/cache
-
-## PHP versions we test against
-php:
-  - 7.0
-  - 7.1
-  - nightly
-
-## Environment variables
-env:
-  - coverage=true
+    - $HOME/.composer/cache/files
 
 ## Build matrix for lowest and highest possible targets
 matrix:
   include:
     - php: 7.0
       env:
+        - qaExtended=true
+    - php: 7.1
+    - php: nightly
+      env:
+        - dropPlatform=false
+    - php: 7.0
+      env:
         - dependencies=lowest
-        - coverage=false
     - php: 7.1
       env:
         - dependencies=lowest
-        - coverage=false
     - php: nightly
       env:
         - dependencies=lowest
-        - coverage=false
+        - dropPlatform=false
     - php: 7.0
       env:
         - dependencies=highest
-        - coverage=false
     - php: 7.1
       env:
         - dependencies=highest
-        - coverage=false
     - php: nightly
       env:
         - dependencies=highest
-        - coverage=false
+        - dropPlatform=false
 
 ## Install or update dependencies
 install:
   - composer validate
-  - if [ "$coverage" = "false" ]; then phpenv config-rm xdebug.ini || :; fi;
+  - if [ -z "$dropPlatform" ]; then composer config --unset platform.php; fi;
+  - if [ -z "$qaExtended" ]; then phpenv config-rm xdebug.ini || :; fi;
   - if [ -z "$dependencies" ]; then composer install --prefer-dist; fi;
   - if [ "$dependencies" = "lowest" ]; then composer update --prefer-lowest --prefer-dist -n; fi;
   - if [ "$dependencies" = "highest" ]; then composer update --prefer-dist -n; fi;
@@ -55,8 +48,8 @@ install:
 
 ## Run the actual test
 script:
-  - if [ "$coverage" = "false" ]; then make ci; fi;
-  - if [ "$coverage" = "true" ]; then make ci-with-coverage; fi;
+  - if [ -z "$qaExtended" ]; then make ci; fi;
+  - if [ "$qaExtended" = "true" ]; then make ci-extended; fi;
 
 ## Gather coverage and set it to coverage servers
-after_script: make ci-coverage
+after_script: if [ "$qaExtended" = "true" ]; then make ci-coverage; fi;

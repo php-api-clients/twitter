@@ -28,7 +28,7 @@ class Profile extends BaseProfile
         });
     }
 
-    public function refresh() : Profile
+    public function refresh(): Profile
     {
         throw new \Exception('TODO: create refresh method!');
     }

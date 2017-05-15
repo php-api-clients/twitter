@@ -10,7 +10,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function favorited() : bool
+    public function favorited(): bool
     {
         return null;
     }
@@ -18,7 +18,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function truncated() : bool
+    public function truncated(): bool
     {
         return null;
     }
@@ -26,7 +26,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return DateTime
      */
-    public function createdAt() : DateTime
+    public function createdAt(): DateTime
     {
         return null;
     }
@@ -34,7 +34,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function idStr() : string
+    public function idStr(): string
     {
         return null;
     }
@@ -42,7 +42,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function inReplyToUserIdStr() : string
+    public function inReplyToUserIdStr(): string
     {
         return null;
     }
@@ -50,7 +50,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return array
      */
-    public function contributors() : array
+    public function contributors(): array
     {
         return null;
     }
@@ -58,7 +58,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function text() : string
+    public function text(): string
     {
         return null;
     }
@@ -66,7 +66,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function retweetCount() : int
+    public function retweetCount(): int
     {
         return null;
     }
@@ -74,7 +74,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function inReplyToStatusIdStr() : string
+    public function inReplyToStatusIdStr(): string
     {
         return null;
     }
@@ -82,7 +82,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function id() : int
+    public function id(): int
     {
         return null;
     }
@@ -90,7 +90,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function retweeted() : bool
+    public function retweeted(): bool
     {
         return null;
     }
@@ -98,7 +98,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function possiblySensitive() : bool
+    public function possiblySensitive(): bool
     {
         return null;
     }
@@ -106,7 +106,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function inReplyToUserId() : int
+    public function inReplyToUserId(): int
     {
         return null;
     }
@@ -114,7 +114,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return User
      */
-    public function user() : User
+    public function user(): User
     {
         return null;
     }
@@ -122,7 +122,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function inReplyToScreenName() : string
+    public function inReplyToScreenName(): string
     {
         return null;
     }
@@ -130,7 +130,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function source() : string
+    public function source(): string
     {
         return null;
     }
@@ -138,7 +138,7 @@ abstract class EmptyTweet implements TweetInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function inReplyToStatusId() : int
+    public function inReplyToStatusId(): int
     {
         return null;
     }

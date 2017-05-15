@@ -103,7 +103,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return bool
      */
-    public function favorited() : bool
+    public function favorited(): bool
     {
         return $this->favorited;
     }
@@ -111,7 +111,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return bool
      */
-    public function truncated() : bool
+    public function truncated(): bool
     {
         return $this->truncated;
     }
@@ -119,7 +119,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return DateTime
      */
-    public function createdAt() : DateTime
+    public function createdAt(): DateTime
     {
         return $this->created_at;
     }
@@ -127,7 +127,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return string
      */
-    public function idStr() : string
+    public function idStr(): string
     {
         return $this->id_str;
     }
@@ -135,7 +135,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return string
      */
-    public function inReplyToUserIdStr() : string
+    public function inReplyToUserIdStr(): string
     {
         return $this->in_reply_to_user_id_str;
     }
@@ -143,7 +143,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return array
      */
-    public function contributors() : array
+    public function contributors(): array
     {
         return $this->contributors;
     }
@@ -151,7 +151,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return string
      */
-    public function text() : string
+    public function text(): string
     {
         return $this->text;
     }
@@ -159,7 +159,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return int
      */
-    public function retweetCount() : int
+    public function retweetCount(): int
     {
         return $this->retweet_count;
     }
@@ -167,7 +167,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return string
      */
-    public function inReplyToStatusIdStr() : string
+    public function inReplyToStatusIdStr(): string
     {
         return $this->in_reply_to_status_id_str;
     }
@@ -175,7 +175,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return int
      */
-    public function id() : int
+    public function id(): int
     {
         return $this->id;
     }
@@ -183,7 +183,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return bool
      */
-    public function retweeted() : bool
+    public function retweeted(): bool
     {
         return $this->retweeted;
     }
@@ -191,7 +191,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return bool
      */
-    public function possiblySensitive() : bool
+    public function possiblySensitive(): bool
     {
         return $this->possibly_sensitive;
     }
@@ -199,7 +199,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return int
      */
-    public function inReplyToUserId() : int
+    public function inReplyToUserId(): int
     {
         return $this->in_reply_to_user_id;
     }
@@ -207,7 +207,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return User
      */
-    public function user() : User
+    public function user(): User
     {
         return $this->user;
     }
@@ -215,7 +215,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return string
      */
-    public function inReplyToScreenName() : string
+    public function inReplyToScreenName(): string
     {
         return $this->in_reply_to_screen_name;
     }
@@ -223,7 +223,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return string
      */
-    public function source() : string
+    public function source(): string
     {
         return $this->source;
     }
@@ -231,7 +231,7 @@ abstract class Tweet extends AbstractResource implements TweetInterface
     /**
      * @return int
      */
-    public function inReplyToStatusId() : int
+    public function inReplyToStatusId(): int
     {
         return $this->in_reply_to_status_id;
     }

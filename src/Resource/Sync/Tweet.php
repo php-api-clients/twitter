@@ -6,7 +6,7 @@ use ApiClients\Client\Twitter\Resource\Tweet as BaseTweet;
 
 class Tweet extends BaseTweet
 {
-    public function refresh() : Tweet
+    public function refresh(): Tweet
     {
         return $this->wait($this->callAsync('refresh'));
     }

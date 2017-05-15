@@ -7,5 +7,6 @@ use Rx\Observable;
 interface AsyncStreamingClientInterface
 {
     public function sample(): Observable;
+
     public function filtered(array $filter = []): Observable;
 }

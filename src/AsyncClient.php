@@ -16,11 +16,25 @@ use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\ResponseInterface;
 use React\EventLoop\LoopInterface;
 use React\Promise\PromiseInterface;
-use Rx\Observable;
 use function React\Promise\resolve;
 
 final class AsyncClient implements AsyncClientInterface
 {
+
+    /**
+     * @var Client
+     */
+    protected $client;
+
+    /**
+     * @var array
+     */
+    protected $options;
+
+    /**
+     * @var AsyncStreamingClient
+     */
+    protected $streamingClient;
     /**
      * @var string
      */
@@ -37,27 +51,12 @@ final class AsyncClient implements AsyncClientInterface
     private $loop;
 
     /**
-     * @var Client
-     */
-    protected $client;
-
-    /**
-     * @var array
-     */
-    protected $options;
-
-    /**
-     * @var AsyncStreamingClient
-     */
-    protected $streamingClient;
-
-    /**
      * AsyncClient constructor.
-     * @param string $consumerKey
-     * @param string $consumerSecret
+     * @param string        $consumerKey
+     * @param string        $consumerSecret
      * @param LoopInterface $loop
-     * @param array $options
-     * @param Client|null $client
+     * @param array         $options
+     * @param Client|null   $client
      */
     public function __construct(
         string $consumerKey,

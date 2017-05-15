@@ -3,9 +3,9 @@
 namespace ApiClients\Client\Twitter\Resource\Sync;
 
 use ApiClients\Client\Twitter\Resource\Async\Profile as AsyncProfile;
-use ApiClients\Foundation\Hydrator\CommandBus\Command\BuildAsyncFromSyncCommand;
 use ApiClients\Client\Twitter\Resource\Profile as BaseProfile;
 use ApiClients\Client\Twitter\Resource\ProfileInterface;
+use ApiClients\Foundation\Hydrator\CommandBus\Command\BuildAsyncFromSyncCommand;
 use ApiClients\Foundation\Hydrator\CommandBus\Command\BuildSyncFromAsyncCommand;
 
 class Profile extends BaseProfile
@@ -23,7 +23,7 @@ class Profile extends BaseProfile
         );
     }
 
-    public function refresh() : Profile
+    public function refresh(): Profile
     {
         return $this->wait(
             $this->handleCommand(

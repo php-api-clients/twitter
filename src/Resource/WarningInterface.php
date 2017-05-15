@@ -11,10 +11,10 @@ interface WarningInterface extends ResourceInterface
     /**
      * @return array
      */
-    public function status() : array;
+    public function status(): array;
 
     /**
      * @return string
      */
-    public function timestampMs() : string;
+    public function timestampMs(): string;
 }

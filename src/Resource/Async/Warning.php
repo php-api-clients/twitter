@@ -6,7 +6,7 @@ use ApiClients\Client\Twitter\Resource\Warning as BaseWarning;
 
 class Warning extends BaseWarning
 {
-    public function refresh() : Warning
+    public function refresh(): Warning
     {
         throw new \Exception('TODO: create refresh method!');
     }

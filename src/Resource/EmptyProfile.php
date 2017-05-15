@@ -9,7 +9,7 @@ abstract class EmptyProfile implements ProfileInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function id() : int
+    public function id(): int
     {
         return null;
     }
@@ -17,7 +17,7 @@ abstract class EmptyProfile implements ProfileInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function idStr() : string
+    public function idStr(): string
     {
         return null;
     }
@@ -25,7 +25,7 @@ abstract class EmptyProfile implements ProfileInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function name() : string
+    public function name(): string
     {
         return null;
     }
@@ -33,7 +33,7 @@ abstract class EmptyProfile implements ProfileInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function screenName() : string
+    public function screenName(): string
     {
         return null;
     }
@@ -41,7 +41,7 @@ abstract class EmptyProfile implements ProfileInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function location() : string
+    public function location(): string
     {
         return null;
     }
@@ -49,7 +49,7 @@ abstract class EmptyProfile implements ProfileInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function profileLocation() : string
+    public function profileLocation(): string
     {
         return null;
     }
@@ -57,7 +57,7 @@ abstract class EmptyProfile implements ProfileInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function description() : string
+    public function description(): string
     {
         return null;
     }
@@ -65,13 +65,13 @@ abstract class EmptyProfile implements ProfileInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function url() : string
+    public function url(): string
     {
         return null;
     }
 
     /**
-     * @param string $name
+     * @param  string           $name
      * @return ProfileInterface
      */
     public function withName(string $name): ProfileInterface
@@ -80,7 +80,7 @@ abstract class EmptyProfile implements ProfileInterface, EmptyResourceInterface
     }
 
     /**
-     * @param string $location
+     * @param  string           $location
      * @return ProfileInterface
      */
     public function withLocation(string $location): ProfileInterface
@@ -89,7 +89,7 @@ abstract class EmptyProfile implements ProfileInterface, EmptyResourceInterface
     }
 
     /**
-     * @param string $description
+     * @param  string           $description
      * @return ProfileInterface
      */
     public function withDescription(string $description): ProfileInterface
@@ -98,7 +98,7 @@ abstract class EmptyProfile implements ProfileInterface, EmptyResourceInterface
     }
 
     /**
-     * @param string $url
+     * @param  string           $url
      * @return ProfileInterface
      */
     public function withUrl(string $url): ProfileInterface

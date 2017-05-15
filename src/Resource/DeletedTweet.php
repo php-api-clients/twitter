@@ -23,7 +23,7 @@ abstract class DeletedTweet extends AbstractResource implements DeletedTweetInte
     /**
      * @return array
      */
-    public function status() : array
+    public function status(): array
     {
         return $this->status;
     }
@@ -31,7 +31,7 @@ abstract class DeletedTweet extends AbstractResource implements DeletedTweetInte
     /**
      * @return string
      */
-    public function timestampMs() : string
+    public function timestampMs(): string
     {
         return $this->timestamp_ms;
     }

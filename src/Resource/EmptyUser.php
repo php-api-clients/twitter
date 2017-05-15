@@ -10,7 +10,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function id() : int
+    public function id(): int
     {
         return null;
     }
@@ -18,7 +18,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function idStr() : string
+    public function idStr(): string
     {
         return null;
     }
@@ -26,7 +26,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function name() : string
+    public function name(): string
     {
         return null;
     }
@@ -34,7 +34,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function screenName() : string
+    public function screenName(): string
     {
         return null;
     }
@@ -42,7 +42,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function location() : string
+    public function location(): string
     {
         return null;
     }
@@ -50,7 +50,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function profileLocation() : string
+    public function profileLocation(): string
     {
         return null;
     }
@@ -58,7 +58,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function description() : string
+    public function description(): string
     {
         return null;
     }
@@ -66,7 +66,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function url() : string
+    public function url(): string
     {
         return null;
     }
@@ -74,7 +74,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function protected() : bool
+    public function protected(): bool
     {
         return null;
     }
@@ -82,7 +82,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function followersCount() : int
+    public function followersCount(): int
     {
         return null;
     }
@@ -90,7 +90,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function friendsCount() : int
+    public function friendsCount(): int
     {
         return null;
     }
@@ -98,7 +98,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function listedCount() : int
+    public function listedCount(): int
     {
         return null;
     }
@@ -106,7 +106,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return DateTime
      */
-    public function createdAt() : DateTime
+    public function createdAt(): DateTime
     {
         return null;
     }
@@ -114,7 +114,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function favouritesCount() : int
+    public function favouritesCount(): int
     {
         return null;
     }
@@ -122,7 +122,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function utcOffset() : int
+    public function utcOffset(): int
     {
         return null;
     }
@@ -130,7 +130,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function timeZone() : string
+    public function timeZone(): string
     {
         return null;
     }
@@ -138,7 +138,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function geoEnabled() : bool
+    public function geoEnabled(): bool
     {
         return null;
     }
@@ -146,7 +146,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function verified() : bool
+    public function verified(): bool
     {
         return null;
     }
@@ -154,7 +154,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return int
      */
-    public function statusesCount() : int
+    public function statusesCount(): int
     {
         return null;
     }
@@ -162,7 +162,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function lang() : string
+    public function lang(): string
     {
         return null;
     }
@@ -170,7 +170,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return array
      */
-    public function status() : array
+    public function status(): array
     {
         return null;
     }
@@ -178,7 +178,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function contributorsEnabled() : bool
+    public function contributorsEnabled(): bool
     {
         return null;
     }
@@ -186,7 +186,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function isTranslator() : bool
+    public function isTranslator(): bool
     {
         return null;
     }
@@ -194,7 +194,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function isTranslatorEnabled() : bool
+    public function isTranslatorEnabled(): bool
     {
         return null;
     }
@@ -202,7 +202,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function profileBackgroundColor() : string
+    public function profileBackgroundColor(): string
     {
         return null;
     }
@@ -210,7 +210,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function profileBackgroundImageUrl() : string
+    public function profileBackgroundImageUrl(): string
     {
         return null;
     }
@@ -218,7 +218,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function profileBackgroundImageUrlHttps() : string
+    public function profileBackgroundImageUrlHttps(): string
     {
         return null;
     }
@@ -226,7 +226,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function profileBackgroundTile() : bool
+    public function profileBackgroundTile(): bool
     {
         return null;
     }
@@ -234,7 +234,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function profileImageUrl() : string
+    public function profileImageUrl(): string
     {
         return null;
     }
@@ -242,7 +242,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function profileImageUrlHttps() : string
+    public function profileImageUrlHttps(): string
     {
         return null;
     }
@@ -250,7 +250,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function profileBannerUrl() : string
+    public function profileBannerUrl(): string
     {
         return null;
     }
@@ -258,7 +258,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function profileLinkColor() : string
+    public function profileLinkColor(): string
     {
         return null;
     }
@@ -266,7 +266,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function profileSidebarBorderColor() : string
+    public function profileSidebarBorderColor(): string
     {
         return null;
     }
@@ -274,7 +274,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function profileSidebarFillColor() : string
+    public function profileSidebarFillColor(): string
     {
         return null;
     }
@@ -282,7 +282,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function profileTextColor() : string
+    public function profileTextColor(): string
     {
         return null;
     }
@@ -290,7 +290,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function profileUseBackgroundImage() : bool
+    public function profileUseBackgroundImage(): bool
     {
         return null;
     }
@@ -298,7 +298,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function hasExtendedProfile() : bool
+    public function hasExtendedProfile(): bool
     {
         return null;
     }
@@ -306,7 +306,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function defaultProfile() : bool
+    public function defaultProfile(): bool
     {
         return null;
     }
@@ -314,7 +314,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function defaultProfileImage() : bool
+    public function defaultProfileImage(): bool
     {
         return null;
     }
@@ -322,7 +322,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function following() : bool
+    public function following(): bool
     {
         return null;
     }
@@ -330,7 +330,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function followRequestSent() : bool
+    public function followRequestSent(): bool
     {
         return null;
     }
@@ -338,7 +338,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return bool
      */
-    public function notifications() : bool
+    public function notifications(): bool
     {
         return null;
     }
@@ -346,7 +346,7 @@ abstract class EmptyUser implements UserInterface, EmptyResourceInterface
     /**
      * @return string
      */
-    public function translatorType() : string
+    public function translatorType(): string
     {
         return null;
     }

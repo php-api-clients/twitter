@@ -224,7 +224,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return int
      */
-    public function id() : int
+    public function id(): int
     {
         return $this->id;
     }
@@ -232,7 +232,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function idStr() : string
+    public function idStr(): string
     {
         return $this->id_str;
     }
@@ -240,7 +240,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function name() : string
+    public function name(): string
     {
         return $this->name;
     }
@@ -248,7 +248,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function screenName() : string
+    public function screenName(): string
     {
         return $this->screen_name;
     }
@@ -256,7 +256,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function location() : string
+    public function location(): string
     {
         return $this->location;
     }
@@ -264,7 +264,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function profileLocation() : string
+    public function profileLocation(): string
     {
         return $this->profile_location;
     }
@@ -272,7 +272,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function description() : string
+    public function description(): string
     {
         return $this->description;
     }
@@ -280,7 +280,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function url() : string
+    public function url(): string
     {
         return $this->url;
     }
@@ -288,7 +288,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return bool
      */
-    public function protected() : bool
+    public function protected(): bool
     {
         return $this->protected;
     }
@@ -296,7 +296,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return int
      */
-    public function followersCount() : int
+    public function followersCount(): int
     {
         return $this->followers_count;
     }
@@ -304,7 +304,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return int
      */
-    public function friendsCount() : int
+    public function friendsCount(): int
     {
         return $this->friends_count;
     }
@@ -312,7 +312,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return int
      */
-    public function listedCount() : int
+    public function listedCount(): int
     {
         return $this->listed_count;
     }
@@ -320,7 +320,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return DateTime
      */
-    public function createdAt() : DateTime
+    public function createdAt(): DateTime
     {
         return $this->created_at;
     }
@@ -328,7 +328,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return int
      */
-    public function favouritesCount() : int
+    public function favouritesCount(): int
     {
         return $this->favourites_count;
     }
@@ -336,7 +336,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return int
      */
-    public function utcOffset() : int
+    public function utcOffset(): int
     {
         return $this->utc_offset;
     }
@@ -344,7 +344,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function timeZone() : string
+    public function timeZone(): string
     {
         return $this->time_zone;
     }
@@ -352,7 +352,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return bool
      */
-    public function geoEnabled() : bool
+    public function geoEnabled(): bool
     {
         return $this->geo_enabled;
     }
@@ -360,7 +360,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return bool
      */
-    public function verified() : bool
+    public function verified(): bool
     {
         return $this->verified;
     }
@@ -368,7 +368,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return int
      */
-    public function statusesCount() : int
+    public function statusesCount(): int
     {
         return $this->statuses_count;
     }
@@ -376,7 +376,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function lang() : string
+    public function lang(): string
     {
         return $this->lang;
     }
@@ -384,7 +384,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return array
      */
-    public function status() : array
+    public function status(): array
     {
         return $this->status;
     }
@@ -392,7 +392,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return bool
      */
-    public function contributorsEnabled() : bool
+    public function contributorsEnabled(): bool
     {
         return $this->contributors_enabled;
     }
@@ -400,7 +400,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return bool
      */
-    public function isTranslator() : bool
+    public function isTranslator(): bool
     {
         return $this->is_translator;
     }
@@ -408,7 +408,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return bool
      */
-    public function isTranslatorEnabled() : bool
+    public function isTranslatorEnabled(): bool
     {
         return $this->is_translator_enabled;
     }
@@ -416,7 +416,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function profileBackgroundColor() : string
+    public function profileBackgroundColor(): string
     {
         return $this->profile_background_color;
     }
@@ -424,7 +424,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function profileBackgroundImageUrl() : string
+    public function profileBackgroundImageUrl(): string
     {
         return $this->profile_background_image_url;
     }
@@ -432,7 +432,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function profileBackgroundImageUrlHttps() : string
+    public function profileBackgroundImageUrlHttps(): string
     {
         return $this->profile_background_image_url_https;
     }
@@ -440,7 +440,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return bool
      */
-    public function profileBackgroundTile() : bool
+    public function profileBackgroundTile(): bool
     {
         return $this->profile_background_tile;
     }
@@ -448,7 +448,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function profileImageUrl() : string
+    public function profileImageUrl(): string
     {
         return $this->profile_image_url;
     }
@@ -456,7 +456,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function profileImageUrlHttps() : string
+    public function profileImageUrlHttps(): string
     {
         return $this->profile_image_url_https;
     }
@@ -464,7 +464,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function profileBannerUrl() : string
+    public function profileBannerUrl(): string
     {
         return $this->profile_banner_url;
     }
@@ -472,7 +472,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function profileLinkColor() : string
+    public function profileLinkColor(): string
     {
         return $this->profile_link_color;
     }
@@ -480,7 +480,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function profileSidebarBorderColor() : string
+    public function profileSidebarBorderColor(): string
     {
         return $this->profile_sidebar_border_color;
     }
@@ -488,7 +488,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function profileSidebarFillColor() : string
+    public function profileSidebarFillColor(): string
     {
         return $this->profile_sidebar_fill_color;
     }
@@ -496,7 +496,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return string
      */
-    public function profileTextColor() : string
+    public function profileTextColor(): string
     {
         return $this->profile_text_color;
     }
@@ -504,7 +504,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return bool
      */
-    public function profileUseBackgroundImage() : bool
+    public function profileUseBackgroundImage(): bool
     {
         return $this->profile_use_background_image;
     }
@@ -512,7 +512,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return bool
      */
-    public function hasExtendedProfile() : bool
+    public function hasExtendedProfile(): bool
     {
         return $this->has_extended_profile;
     }
@@ -520,7 +520,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return bool
      */
-    public function defaultProfile() : bool
+    public function defaultProfile(): bool
     {
         return $this->default_profile;
     }
@@ -528,7 +528,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return bool
      */
-    public function defaultProfileImage() : bool
+    public function defaultProfileImage(): bool
     {
         return $this->default_profile_image;
     }
@@ -536,7 +536,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return bool
      */
-    public function following() : bool
+    public function following(): bool
     {
         return $this->following;
     }
@@ -544,7 +544,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return bool
      */
-    public function followRequestSent() : bool
+    public function followRequestSent(): bool
     {
         return $this->follow_request_sent;
     }
@@ -552,7 +552,7 @@ abstract class User extends AbstractResource implements UserInterface
     /**
      * @return bool
      */
-    public function notifications() : bool
+    public function notifications(): bool
     {
         return $this->notifications;
     }

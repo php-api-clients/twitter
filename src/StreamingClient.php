@@ -34,8 +34,8 @@ final class StreamingClient implements StreamingClientInterface
 
     /**
      * StreamingClient constructor.
-     * @param LoopInterface $loop
-     * @param CommandBusInterface $commandBus
+     * @param LoopInterface                 $loop
+     * @param CommandBusInterface           $commandBus
      * @param AsyncStreamingClientInterface $client
      */
     public function __construct(

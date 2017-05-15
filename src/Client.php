@@ -20,15 +20,6 @@ use function Clue\React\Block\await;
 
 final class Client implements ClientInterface
 {
-    /**
-     * @var string
-     */
-    private $consumerKey;
-
-    /**
-     * @var string
-     */
-    private $consumerSecret;
 
     /**
      * @var LoopInterface
@@ -54,6 +45,15 @@ final class Client implements ClientInterface
      * @var array
      */
     protected $options;
+    /**
+     * @var string
+     */
+    private $consumerKey;
+
+    /**
+     * @var string
+     */
+    private $consumerSecret;
 
     public function __construct(
         string $consumerKey,
@@ -91,6 +91,7 @@ final class Client implements ClientInterface
             [],
             $this->client
         ))->withAccessToken($accessToken, $accessTokenSecret);
+
         return $clone;
     }
 
@@ -115,6 +116,7 @@ final class Client implements ClientInterface
             [],
             $this->client
         ));
+
         return $clone;
     }
 

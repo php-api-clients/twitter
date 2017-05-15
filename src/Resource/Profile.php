@@ -58,7 +58,7 @@ abstract class Profile extends AbstractResource implements ProfileInterface
     /**
      * @return int
      */
-    public function id() : int
+    public function id(): int
     {
         return $this->id;
     }
@@ -66,7 +66,7 @@ abstract class Profile extends AbstractResource implements ProfileInterface
     /**
      * @return string
      */
-    public function idStr() : string
+    public function idStr(): string
     {
         return $this->id_str;
     }
@@ -74,7 +74,7 @@ abstract class Profile extends AbstractResource implements ProfileInterface
     /**
      * @return string
      */
-    public function name() : string
+    public function name(): string
     {
         return $this->name;
     }
@@ -82,7 +82,7 @@ abstract class Profile extends AbstractResource implements ProfileInterface
     /**
      * @return string
      */
-    public function screenName() : string
+    public function screenName(): string
     {
         return $this->screen_name;
     }
@@ -90,7 +90,7 @@ abstract class Profile extends AbstractResource implements ProfileInterface
     /**
      * @return string
      */
-    public function location() : string
+    public function location(): string
     {
         return $this->location;
     }
@@ -98,7 +98,7 @@ abstract class Profile extends AbstractResource implements ProfileInterface
     /**
      * @return string
      */
-    public function profileLocation() : string
+    public function profileLocation(): string
     {
         return $this->profile_location;
     }
@@ -106,7 +106,7 @@ abstract class Profile extends AbstractResource implements ProfileInterface
     /**
      * @return string
      */
-    public function description() : string
+    public function description(): string
     {
         return $this->description;
     }
@@ -114,13 +114,13 @@ abstract class Profile extends AbstractResource implements ProfileInterface
     /**
      * @return string
      */
-    public function url() : string
+    public function url(): string
     {
         return $this->url;
     }
 
     /**
-     * @param string $name
+     * @param  string           $name
      * @return ProfileInterface
      */
     public function withName(string $name): ProfileInterface
@@ -128,11 +128,12 @@ abstract class Profile extends AbstractResource implements ProfileInterface
         $clone = clone $this;
         $clone->name = $name;
         $clone->changedFields['name'] = 'name';
+
         return $clone;
     }
 
     /**
-     * @param string $location
+     * @param  string           $location
      * @return ProfileInterface
      */
     public function withLocation(string $location): ProfileInterface
@@ -140,11 +141,12 @@ abstract class Profile extends AbstractResource implements ProfileInterface
         $clone = clone $this;
         $clone->location = $location;
         $clone->changedFields['location'] = 'location';
+
         return $clone;
     }
 
     /**
-     * @param string $description
+     * @param  string           $description
      * @return ProfileInterface
      */
     public function withDescription(string $description): ProfileInterface
@@ -152,11 +154,12 @@ abstract class Profile extends AbstractResource implements ProfileInterface
         $clone = clone $this;
         $clone->description = $description;
         $clone->changedFields['description'] = 'description';
+
         return $clone;
     }
 
     /**
-     * @param string $url
+     * @param  string           $url
      * @return ProfileInterface
      */
     public function withUrl(string $url): ProfileInterface
@@ -164,6 +167,7 @@ abstract class Profile extends AbstractResource implements ProfileInterface
         $clone = clone $this;
         $clone->url = $url;
         $clone->changedFields['url'] = 'url';
+
         return $clone;
     }
 

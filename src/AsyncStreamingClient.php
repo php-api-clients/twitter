@@ -17,14 +17,14 @@ final class AsyncStreamingClient implements AsyncStreamingClientInterface
     const STREAM_DELIMITER = "\r\n";
 
     /**
-     * @var LoopInterface
-     */
-    private $loop;
-
-    /**
      * @var Client
      */
     protected $client;
+
+    /**
+     * @var LoopInterface
+     */
+    private $loop;
 
     public function __construct(Client $client)
     {
@@ -41,6 +41,7 @@ final class AsyncStreamingClient implements AsyncStreamingClientInterface
     public function filtered(array $filter = []): Observable
     {
         $postData = http_build_query($filter);
+
         return $this->stream(
             new Request(
                 'POST',
