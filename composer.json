@@ -79,9 +79,9 @@
             "@unit"
         ],
         "qa-ci": [
-            "@qa-all"
+            "@unit"
         ],
-        "qa-ci-coverage": [
+        "qa-ci-extended": [
             "@qa-all-coverage"
         ],
         "qa-ci-windows": [
