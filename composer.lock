@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9167bd2b7b879a30977c5e727b51bd3b",
+    "content-hash": "5641dc78696d6771506f93fe1f17ad35",
     "packages": [
         {
             "name": "api-clients/client-services",
@@ -341,16 +341,16 @@
         },
         {
             "name": "api-clients/middleware-json",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/middleware-json.git",
-                "reference": "a59293516db3b69348f466a7e8e4ba43dd88b1ce"
+                "reference": "2715b99244e1d608461b4ced0d280930ccbe2057"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/middleware-json/zipball/a59293516db3b69348f466a7e8e4ba43dd88b1ce",
-                "reference": "a59293516db3b69348f466a7e8e4ba43dd88b1ce",
+                "url": "https://api.github.com/repos/php-api-clients/middleware-json/zipball/2715b99244e1d608461b4ced0d280930ccbe2057",
+                "reference": "2715b99244e1d608461b4ced0d280930ccbe2057",
                 "shasum": ""
             },
             "require": {
@@ -381,7 +381,7 @@
                     "email": "ceesjank@gmail.com"
                 }
             ],
-            "time": "2017-07-04T20:44:52+00:00"
+            "time": "2017-07-13T19:38:25+00:00"
         },
         {
             "name": "api-clients/middleware-oauth1",
@@ -1105,20 +1105,23 @@
         },
         {
             "name": "evenement/evenement",
-            "version": "v2.0.0",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/igorw/evenement.git",
-                "reference": "f6e843799fd4f4184d54d8fc7b5b3551c9fa803e"
+                "reference": "6ba9a777870ab49f417e703229d53931ed40fd7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/igorw/evenement/zipball/f6e843799fd4f4184d54d8fc7b5b3551c9fa803e",
-                "reference": "f6e843799fd4f4184d54d8fc7b5b3551c9fa803e",
+                "url": "https://api.github.com/repos/igorw/evenement/zipball/6ba9a777870ab49f417e703229d53931ed40fd7a",
+                "reference": "6ba9a777870ab49f417e703229d53931ed40fd7a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0||^5.7||^4.8.35"
             },
             "type": "library",
             "extra": {
@@ -1138,8 +1141,7 @@
             "authors": [
                 {
                     "name": "Igor Wiedler",
-                    "email": "igor@wiedler.ch",
-                    "homepage": "http://wiedler.ch/igor/"
+                    "email": "igor@wiedler.ch"
                 }
             ],
             "description": "Événement is a very simple event dispatching library for PHP",
@@ -1147,7 +1149,7 @@
                 "event-dispatcher",
                 "event-emitter"
             ],
-            "time": "2012-11-02T14:49:47+00:00"
+            "time": "2017-07-17T17:39:19+00:00"
         },
         {
             "name": "guzzlehttp/psr7",

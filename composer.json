@@ -16,7 +16,7 @@
         "api-clients/client-services": "^1.1",
         "api-clients/foundation": "dev-master",
         "api-clients/middleware-http-exceptions": "^2.0",
-        "api-clients/middleware-json": "^2.0",
+        "api-clients/middleware-json": "^3.0||^2.0",
         "api-clients/middleware-oauth1": "^4.0",
         "api-clients/middleware-user-agent": "^2.0",
         "api-clients/rx": "^2.0",
