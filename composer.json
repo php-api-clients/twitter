@@ -3,8 +3,6 @@
     "description": "Async first twitter client",
     "homepage": "https://php-api-clients.org/clients/twitter/",
     "license": "MIT",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "authors": [
         {
             "name": "Cees-Jan Kiewiet",
@@ -13,20 +11,20 @@
     ],
     "require": {
         "php": "^7.0",
-        "api-clients/client-services": "^1.1",
-        "api-clients/foundation": "dev-master",
+        "api-clients/client-services": "^1.4",
+        "api-clients/foundation": "^1.0",
         "api-clients/middleware-http-exceptions": "^2.0",
-        "api-clients/middleware-json": "^2.0",
+        "api-clients/middleware-json": "^3.1",
         "api-clients/middleware-oauth1": "^4.0",
         "api-clients/middleware-user-agent": "^2.0",
-        "api-clients/rx": "^2.0",
+        "api-clients/rx": "^2.2",
         "api-clients/rx-operators": "^2.0",
-        "react/http-client": "^0.4.17"
+        "react/http-client": ">=0.4.17"
     },
     "require-dev": {
-        "api-clients/resource-generator": "dev-master",
-        "api-clients/resource-test-utilities": "dev-master",
-        "api-clients/test-utilities": "^4.1"
+        "api-clients/resource-generator": "^1.0",
+        "api-clients/resource-test-utilities": "^1.0",
+        "api-clients/test-utilities": "^4.3"
     },
     "autoload": {
         "psr-4": {
