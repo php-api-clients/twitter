@@ -17,5 +17,5 @@ interface AsyncClientInterface
 
     public function user(string $user): PromiseInterface;
 
-    public function stream(): AsyncStreamingClient;
+    public function stream(): AsyncStreamingClientInterface;
 }

@@ -142,7 +142,7 @@ final class AsyncClient implements AsyncClientInterface
         });
     }
 
-    public function stream(): AsyncStreamingClient
+    public function stream(): AsyncStreamingClientInterface
     {
         if (!($this->streamingClient instanceof AsyncStreamingClient)) {
             $this->streamingClient = new AsyncStreamingClient($this->client);
