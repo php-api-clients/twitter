@@ -13,7 +13,9 @@ interface AsyncClientInterface
 
     public function getCommandBus(): CommandBusInterface;
 
+    public function profile(): PromiseInterface;
+
     public function user(string $user): PromiseInterface;
 
-    public function stream(): AsyncStreamingClient;
+    public function stream(): AsyncStreamingClientInterface;
 }
