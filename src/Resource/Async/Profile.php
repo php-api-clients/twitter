@@ -24,7 +24,7 @@ class Profile extends BaseProfile
         return $this->handleCommand(new RequestCommand(
             new Request('POST', $uri)
         ))->then(function (ResponseInterface $response) {
-            return resolve($this->handleCommand(new HydrateCommand('Profile', $response->getBody()->getJson())));
+            return resolve($this->handleCommand(new HydrateCommand('Profile', $response->getBody()->getParsedContents())));
         });
     }
 

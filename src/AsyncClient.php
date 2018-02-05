@@ -129,7 +129,7 @@ final class AsyncClient implements AsyncClientInterface
         return $this->client->handle(new RequestCommand(
             new Request('GET', 'account/verify_credentials.json')
         ))->then(function (ResponseInterface $response) {
-            return resolve($this->client->handle(new HydrateCommand('Profile', $response->getBody()->getJson())));
+            return resolve($this->client->handle(new HydrateCommand('Profile', $response->getBody()->getParsedContents())));
         });
     }
 
@@ -138,7 +138,7 @@ final class AsyncClient implements AsyncClientInterface
         return $this->client->handle(new RequestCommand(
             new Request('GET', 'users/show.json?screen_name=' . $user)
         ))->then(function (ResponseInterface $response) {
-            return resolve($this->client->handle(new HydrateCommand('User', $response->getBody()->getJson())));
+            return resolve($this->client->handle(new HydrateCommand('User', $response->getBody()->getParsedContents())));
         });
     }
 
