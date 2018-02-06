@@ -11,6 +11,7 @@ use React\EventLoop\LoopInterface;
 use Rx\Observable;
 use Rx\Operator\CutOperator;
 use Rx\React\Promise;
+use Rx\Scheduler\ImmediateScheduler;
 
 final class AsyncStreamingClient implements AsyncStreamingClientInterface
 {
@@ -60,7 +61,7 @@ final class AsyncStreamingClient implements AsyncStreamingClientInterface
         return Promise::toObservable($this->client->handle(new StreamingRequestCommand(
             $request
         )))->switchLatest()->lift(function () {
-            return new CutOperator(self::STREAM_DELIMITER);
+            return new CutOperator(self::STREAM_DELIMITER, new ImmediateScheduler());
         })->filter(function (string $json) {
             return trim($json) !== ''; // To keep the stream alive Twitter sends an empty line at times
         })->_ApiClients_jsonDecode()->flatMap(function (array $document) {
