@@ -142,6 +142,17 @@ final class AsyncClient implements AsyncClientInterface
         });
     }
 
+    public function tweet(string $status, array $tweet = []): PromiseInterface
+    {
+        $tweet['status'] = $status;
+
+        return $this->client->handle(new RequestCommand(
+            new Request('POST', 'statuses/update.json?' . http_build_query($tweet))
+        ))->then(function (ResponseInterface $response) {
+            return resolve($this->client->handle(new HydrateCommand('Tweet', $response->getBody()->getParsedContents())));
+        });
+    }
+
     public function stream(): AsyncStreamingClientInterface
     {
         if (!($this->streamingClient instanceof AsyncStreamingClient)) {

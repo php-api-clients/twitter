@@ -17,5 +17,7 @@ interface AsyncClientInterface
 
     public function user(string $user): PromiseInterface;
 
+    public function tweet(string $status, array $tweet): PromiseInterface;
+
     public function stream(): AsyncStreamingClientInterface;
 }
