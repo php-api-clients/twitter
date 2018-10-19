@@ -48,9 +48,6 @@ final class ApiSettings
         // @codingStandardsIgnoreStart
         $options = array_replace_recursive(self::TRANSPORT_OPTIONS, $suppliedOptions);
         $options[Options::HYDRATOR_OPTIONS][HydratorOptions::NAMESPACE_SUFFIX] = $suffix;
-        $options[Options::TRANSPORT_OPTIONS][TransportOptions::MIDDLEWARE] = array_unique(
-            $options[Options::TRANSPORT_OPTIONS][TransportOptions::MIDDLEWARE]
-        );
         $options[Options::TRANSPORT_OPTIONS][TransportOptions::DEFAULT_REQUEST_OPTIONS][Oauth1Middleware::class][Oauth1Options::CONSUMER_KEY] = new Definition\ConsumerKey($consumerKey);
         $options[Options::TRANSPORT_OPTIONS][TransportOptions::DEFAULT_REQUEST_OPTIONS][Oauth1Middleware::class][Oauth1Options::CONSUMER_SECRET] = new Definition\ConsumerSecret($consumerSecret);
         // @codingStandardsIgnoreEnd
