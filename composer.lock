@@ -885,17 +885,20 @@
         },
         {
             "name": "daverandom/exceptional-json",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DaveRandom/ExceptionalJSON.git",
-                "reference": "7dfa85369633669d9694cbc79db005268718f15a"
+                "reference": "fed957142b4687b079495c80975666dd1a67d61d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DaveRandom/ExceptionalJSON/zipball/7dfa85369633669d9694cbc79db005268718f15a",
-                "reference": "7dfa85369633669d9694cbc79db005268718f15a",
+                "url": "https://api.github.com/repos/DaveRandom/ExceptionalJSON/zipball/fed957142b4687b079495c80975666dd1a67d61d",
+                "reference": "fed957142b4687b079495c80975666dd1a67d61d",
                 "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
             },
             "type": "library",
             "autoload": {
@@ -916,7 +919,7 @@
                 }
             ],
             "description": "JSON encoding and decoding that throws exceptions on failure",
-            "time": "2017-05-31T16:37:55+00:00"
+            "time": "2018-06-11T11:25:57+00:00"
         },
         {
             "name": "doctrine/annotations",
