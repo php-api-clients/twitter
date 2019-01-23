@@ -296,16 +296,16 @@
         },
         {
             "name": "api-clients/middleware-http-exceptions",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-api-clients/middleware-http-exceptions.git",
-                "reference": "e19664a7c87708f0c4104c97eefccd672740a67b"
+                "reference": "b6e2218ef9beaecc4c76909e586ac5e892764e3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/middleware-http-exceptions/zipball/e19664a7c87708f0c4104c97eefccd672740a67b",
-                "reference": "e19664a7c87708f0c4104c97eefccd672740a67b",
+                "url": "https://api.github.com/repos/php-api-clients/middleware-http-exceptions/zipball/b6e2218ef9beaecc4c76909e586ac5e892764e3c",
+                "reference": "b6e2218ef9beaecc4c76909e586ac5e892764e3c",
                 "shasum": ""
             },
             "require": {
@@ -334,7 +334,7 @@
                 }
             ],
             "description": "Wrap failing HTTP requests in HTTP response type specific exceptions",
-            "time": "2017-09-16T12:50:26+00:00"
+            "time": "2018-07-08T12:59:42+00:00"
         },
         {
             "name": "api-clients/middleware-json",
