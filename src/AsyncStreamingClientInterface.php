@@ -9,4 +9,6 @@ interface AsyncStreamingClientInterface
     public function sample(): Observable;
 
     public function filtered(array $filter = []): Observable;
+
+    public function searchTweets(array $filter): Observable;
 }

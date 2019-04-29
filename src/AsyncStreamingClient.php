@@ -4,14 +4,19 @@ namespace ApiClients\Client\Twitter;
 
 use ApiClients\Foundation\Client;
 use ApiClients\Foundation\Hydrator\CommandBus\Command\HydrateCommand;
+use ApiClients\Foundation\Transport\CommandBus\Command\RequestCommand;
 use ApiClients\Foundation\Transport\CommandBus\Command\StreamingRequestCommand;
+use ApiClients\Foundation\Transport\ParsedContentsInterface;
 use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ResponseInterface;
 use React\EventLoop\LoopInterface;
 use Rx\Observable;
 use Rx\Operator\CutOperator;
 use Rx\React\Promise;
 use Rx\Scheduler\ImmediateScheduler;
+use function ApiClients\Tools\Rx\observableFromArray;
+use function RingCentral\Psr7\build_query;
 
 final class AsyncStreamingClient implements AsyncStreamingClientInterface
 {
@@ -54,6 +59,28 @@ final class AsyncStreamingClient implements AsyncStreamingClientInterface
                 $postData
             )
         );
+    }
+
+    public function searchTweets(array $filter = []): Observable
+    {
+        $query = build_query($filter);
+
+        return Promise::toObservable($this->client->handle(new RequestCommand(
+            new Request(
+                'GET',
+                'https://api.twitter.com/1.1/search/tweets.json?' . $query,
+                []
+            )
+        ))->then(function (ResponseInterface $response) {
+            /** @var ParsedContentsInterface $body */
+            $body = $response->getBody();
+
+            return $body->getParsedContents()['statuses'];
+        }))->flatMap(function (array $statuses) {
+            return observableFromArray($statuses);
+        })->flatMap(function (array $document) {
+            return Promise::toObservable($this->client->handle(new HydrateCommand('Tweet', $document)));
+        });
     }
 
     protected function stream(RequestInterface $request): Observable
